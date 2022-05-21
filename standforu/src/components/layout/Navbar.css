@@ -1,0 +1,107 @@
+.home{
+position: absolute;
+width: 419px;
+height: 144px;
+left: 100px;
+top: 32px;
+
+font-family: 'Saira Stencil One';
+font-style: normal;
+font-weight: 400;
+font-size: 60px;
+line-height: 126px;
+text-decoration: none;
+
+color: #4FBFB9;
+}
+
+.buyacar{
+    
+position: relative;
+width: 283.64px;
+height: 84px;
+left: 200px;
+top: 3px;
+
+font-family: 'Roboto Mono';
+font-style: normal;
+font-weight: 300;
+font-size: 30px;
+line-height: 47px;
+display: flex;
+align-items: center;
+text-align: center;
+text-decoration: none;
+
+color: #ffffff;
+}
+
+.sellacar{
+    position: relative;
+width: 283.64px;
+height: 84px;
+left: 275px;
+top: 3px;
+
+font-family: 'Roboto Mono';
+font-style: normal;
+font-weight: 300;
+font-size: 30px;
+line-height: 47px;
+display: flex;
+align-items: center;
+text-align: center;
+text-decoration: none;
+
+color: #ffffff;
+}
+.makeareview{
+    position: relative;
+width: 283.64px;
+height: 84px;
+left: 350px;
+top: 3px;
+
+font-family: 'Roboto Mono';
+font-style: normal;
+font-weight: 300;
+font-size: 30px;
+display: flex;
+align-items: center;
+text-align: center;
+text-decoration: none;
+
+color: #ffffff;}
+
+.icon{
+    position: relative;
+    width: 283.64px;
+    height: 84px;
+    left: 425px;
+    top: 4px;
+    
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 47px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #ffffff;;
+}
+
+.nav-links{
+    position: absolute;
+width: 1500px;
+height: 84px;
+left: 500px;
+top: 55px;
+display: flex;
+align-items: center;
+
+background: #4FBFB9;
+box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1);
+border-radius: 47px;
+}
