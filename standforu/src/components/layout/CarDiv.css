@@ -6,16 +6,17 @@
   justify-content: center;
 }
 
-.car7 {
+.carDiv {
   align-items: center;
   background-color: var(--black-haze);
   border-radius: 36px;
-  box-shadow: 5px 5px 10px 
-#0000001a;
+  box-shadow: 5px 5px 10px #0000001a;
   display: flex;
   flex-direction: column;
-  min-height: 337px;
-  padding: 12px 4px;
+  min-height: 300px;
+  padding-top: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
   width: 275px;
 }
 
@@ -37,6 +38,7 @@
   color: var(--storm-dust);
   font-weight: lighter;
   font-size: 24px;
+  margin-bottom: 0;
 }
 
 .extra {
@@ -44,7 +46,7 @@
     letter-spacing: 0;
     position: absolute;
     text-align: center;
-    padding-top: 4px;
+    top:-6px;
     width: 248px;
     font-weight: lighter;
     font-size: 20px;
@@ -63,13 +65,12 @@
 .rectangle-10 {
   background-color: var(--mist-gray);
   border-radius: 20px;
-  box-shadow: 2px 2px 4px 
-#00000026;
+  box-shadow: 2px 2px 4px #00000026;
   height: 36px;
-  left: 0;
   position: absolute;
-  top: 1px;
   width: 248px;
+  margin:0;
+  top:-10px;
 }
 
 

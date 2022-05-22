@@ -12,20 +12,23 @@ import Navbar from './components/layout/Navbar.js';
 
 function App() {
   return (
-    <Router>
-      <div>
-        <Navbar />
-      </div>
-      <Container customClass ="min-height">
-      <Routes> 
-        <Route exact path="/" element={<Home/>} />
-        <Route exact path="/Buyacar" element={<Buyacar/>} />
-        <Route exact path="/Sellacar" element={<Sellacar/>} />
-        <Route exact path="/Makeareview" element= {<Makeareview/>}/>
-        <Route exact path="/Profile" element= {<Profile/>}/>
-      </Routes>
-      </Container>
-    </Router>
+    <div className='App'>
+      <Router>
+        <div>
+          <Navbar />
+        </div>
+        <Container customClass ="min-height">
+          <Routes> 
+            <Route exact path="/" element={<Home/>} />
+            <Route exact path="/Buyacar" element={<Buyacar/>} />
+            <Route exact path="/Sellacar" element={<Sellacar/>} />
+            <Route exact path="/Makeareview" element= {<Makeareview/>}/>
+            <Route exact path="/Profile" element= {<Profile/>}/>
+          </Routes>
+        </Container>
+      </Router>
+    </div>
+    
   );
 }
 
