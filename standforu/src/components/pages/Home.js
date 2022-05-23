@@ -1,7 +1,9 @@
+// eslint-disable-next-line
 import React, { useEffect, useState } from "react";
 import CarDiv from "../layout/CarDiv";
 import './Home.css';
 import Cars from "../../database/cars.json"
+import Navbar from "../layout/Navbar";
 
 function Home(props) {
 
@@ -28,6 +30,9 @@ function Home(props) {
 
     return (
         <div className="Home">
+            <div>
+                <Navbar link="buyacar"/>
+            </div>
             <div className="cars">
                 {listCars}
             </div>
