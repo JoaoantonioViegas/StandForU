@@ -19,3 +19,14 @@
     grid-row-gap: 3rem;
     justify-items: center;
 }
+.car{
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.car:hover{
+    cursor: pointer;
+    /* transform scale (1.05) in 0.5 seconds */
+    transform: scale(1.05);
+    transition: transform 0.4s ease-in-out;
+}
