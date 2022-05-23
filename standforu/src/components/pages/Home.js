@@ -4,11 +4,20 @@ import CarDiv from "../layout/CarDiv";
 import './Home.css';
 import Cars from "../../database/cars.json"
 import Navbar from "../layout/Navbar";
+import CarAd from "../layout/CarAd";
 
 function Home(props) {
 
-    const divOnClick = (item) => {
-        console.log("divOnClick: " + item)
+    const [openAd, setOpenAd] = useState(false);
+
+    const [carName, setCarName] = useState("");
+    const [carYear , setCarYear] = useState("");
+
+    const divOnClick = (item, year) => {
+        console.log("divOnClick: " + item + " " + year);
+        setCarName(item);
+        setCarYear(year);
+        setOpenAd(true)
     }
 
     var array = [];
@@ -17,12 +26,8 @@ function Home(props) {
 
     });
 
-    useEffect(() => {
-        // setState({isCarDivOpen: false, carDivName: "none"})
-    }, [])
-
     const listCars = array.map(item => 
-        <div className="car" onClick={() => divOnClick(item.nome)} >
+        <div className="car" onClick={() => divOnClick(item.nome, item.ano)} >
             <CarDiv image={item.imagem} info= {<React.Fragment> {item.nome} <br/> {item.ano} <br/> {item.kms + " km"} <br/> {item.preco + " €"}</React.Fragment>}/>
             
         </div>
@@ -30,13 +35,12 @@ function Home(props) {
 
     return (
         <div className="Home">
-            <div>
-                <Navbar link="buyacar"/>
-            </div>
+            {openAd && <CarAd closeAd={setOpenAd} carName={carName} carYear={carYear}/>}
+            {!openAd && <Navbar link="buyacar"/>}
             <div className="cars">
-                {listCars}
+                {!openAd && listCars}
             </div>
-        
+            
         </div>
     );
 }

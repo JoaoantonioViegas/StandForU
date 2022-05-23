@@ -1,0 +1,19 @@
+.CarAd-bg{
+    width: 100vw;
+    height: 100vh;
+    background-color: #ebebeb;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.CarAd-container{
+    width: 500px;
+    height: 500px;
+    border-radius: 2rem;
+    background-color: #fff;
+    box-shadow: 5px 5px 10px #0000001a;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
