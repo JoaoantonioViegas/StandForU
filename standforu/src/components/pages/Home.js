@@ -1,29 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import CarDiv from "../layout/CarDiv";
 import './Home.css';
 import Cars from "../../database/cars.json"
 
-import { useEffect } from "react";
-
 function Home(props) {
 
-    var array = [];
+    const divOnClick = (item) => {
+        console.log("divOnClick: " + item)
+    }
 
+    var array = [];
     Object.keys(Cars).forEach(function (key) {
         array.push(Cars[key]);
 
     });
 
+    useEffect(() => {
+        // setState({isCarDivOpen: false, carDivName: "none"})
+    }, [])
+
     const listCars = array.map(item => 
-        <div className="car">
+        <div className="car" onClick={() => divOnClick(item.nome)} >
             <CarDiv image={item.imagem} info= {<React.Fragment> {item.nome} <br/> {item.ano} <br/> {item.kms + " km"} <br/> {item.preco + " €"}</React.Fragment>}/>
+            
         </div>
     );
-
-   
-    useEffect(() => {
-        console.log(Cars);
-    }, []);
 
     return (
         <div className="Home">
