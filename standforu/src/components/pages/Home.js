@@ -13,6 +13,7 @@ function Home(props) {
     const [carName, setCarName] = useState("");
     const [carYear , setCarYear] = useState("");
     const [visibility, setVisibility] = useState('visible');
+    const [searchTerm, setSearchTerm] = useState("");
 
     const divOnClick = (item, year) => {
         console.log("divOnClick: " + item + " " + year);
@@ -28,8 +29,14 @@ function Home(props) {
 
     });
 
-    const listCars = array.map(item => 
-        <div className="car" onClick={() => divOnClick(item.nome, item.ano)} >
+    const listCars = array.filter((item) => {
+        if(searchTerm === ""){
+            return item
+        } else if (item.nome.toLowerCase().includes(searchTerm.toLowerCase())) {
+            return item
+        }
+    }).map((item,key) => 
+        <div className="car" onClick={() => divOnClick(item.nome, item.ano)} key={key}>
             <CarDiv image={item.imagem} info= {<React.Fragment> {item.nome} <br/> {item.ano} <br/> {item.kms + " km"} <br/> {item.preco + " €"}</React.Fragment>}/>
             
         </div>
@@ -39,7 +46,7 @@ function Home(props) {
         <div className="Home">
             
             {!openAd && <Navbar link="buyacar"/>}
-            <input type={'text'} placeholder={'Search...'} />
+            <input  className="searchInput" type={'text'} placeholder={'Search...'} onChange={(event) => setSearchTerm(event.target.value)}/>
             {openAd && <CarAd closeAd={setOpenAd} visible={setVisibility} carName={carName} carYear={carYear}/>}
             
             <div className="cars" style={{visibility:visibility}}>
