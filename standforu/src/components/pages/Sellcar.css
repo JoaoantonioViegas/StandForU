@@ -335,6 +335,8 @@
     background: transparent;
     transition: border-color 0.2s;
     color: #000;
+    resize: none;
+    
 }
 .form__field9:required:valid ~ .form__label9 {
     left: -6vw;
