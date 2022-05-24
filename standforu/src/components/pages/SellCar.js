@@ -10,7 +10,7 @@ class SellCar extends Component {
     };
 
    // if we are using arrow function binding in not required
-   //  this.onImageChange = this.onImageChange.bind(this);
+    this.onImageChange = this.onImageChange.bind(this);
   }
 
   onImageChange = event => {
@@ -61,9 +61,11 @@ class SellCar extends Component {
             
             <div id="split_right">
                 <div class="centered">
-                  <img src={this.state.image} />
+                  <div className="div-upload">
+                    <img className="upload-image" src={this.state.image} />
+                  </div>
                   <h1>Select Image</h1>
-                  <input type="file" name="myImage" onChange={this.onImageChange} />
+                  <label className="labelfile"><input type="file" name="myImage" onChange={this.onImageChange} /></label>
                 </div>
             </div>
             

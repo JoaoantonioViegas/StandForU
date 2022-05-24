@@ -5,20 +5,18 @@
     margin-top: 10px;
     width: 50%;
 }
-.insertphoto{
+input[type=file]{
+
+}
+.labelfile{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
     background-color: #4FBFB9;
     color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    border: none;
-    border-radius: 1vh;
+    border-radius: 2vh;
 }
 /* ------------------------------DIVIDE 1 */
 .form__field1 {
@@ -386,4 +384,16 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: left;
+}
+
+.div-upload{
+    width: 75%;
+}
+
+.upload-image{
+    width: 100%;
+    align-self:flex-center;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.411);
 }
