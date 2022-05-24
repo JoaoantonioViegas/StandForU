@@ -20,7 +20,7 @@
   width: 275px;
 }
 
-.image {
+.cardiv-image {
   align-self: flex-center;
   height: 166px;
   object-fit: cover;

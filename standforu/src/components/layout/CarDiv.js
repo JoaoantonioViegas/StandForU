@@ -6,7 +6,7 @@ function CarDiv(props) {
 
   return (
     <div className="carDiv">
-      <img className="image" src={require('../../images/' + image)} alt={image}/>
+      <img className="cardiv-image" src={require('../../images/' + image)} alt={image}/>
       <div className="info">
         {info}
       </div>

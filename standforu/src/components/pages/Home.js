@@ -14,13 +14,16 @@ function Home(props) {
     const [carYear , setCarYear] = useState("");
     const [visibility, setVisibility] = useState('visible');
     const [searchTerm, setSearchTerm] = useState("");
+    const [carObject, setCarObject] = useState({});
 
-    const divOnClick = (item, year) => {
-        console.log("divOnClick: " + item + " " + year);
-        setCarName(item);
+    const divOnClick = (nome, year) => {
+        // console.log("divOnClick: " + nome + " " + year);
+        setCarName(nome);
         setCarYear(year);
         setOpenAd(true);
         setVisibility('hidden');
+        let car = array.find(item => item.nome === nome && item.ano === year)
+        setCarObject(car);
     }
 
     var array = [];
@@ -47,7 +50,7 @@ function Home(props) {
             
             {!openAd && <Navbar link="buyacar"/>}
             <input  className="searchInput" type={'text'} placeholder={'Search...'} onChange={(event) => setSearchTerm(event.target.value)}/>
-            {openAd && <CarAd closeAd={setOpenAd} visible={setVisibility} carName={carName} carYear={carYear}/>}
+            {openAd && <CarAd closeAd={setOpenAd} visible={setVisibility} carObject={carObject}/>}
             
             <div className="cars" style={{visibility:visibility}}>
                 {listCars}
