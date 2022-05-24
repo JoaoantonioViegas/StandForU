@@ -5,7 +5,7 @@
     position: fixed;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
 }
 .CarAd-container{
     width: 500px;

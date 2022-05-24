@@ -1,12 +1,12 @@
 import React from 'react'
 import './CarAd.css'
 
-function CarAd({closeAd, carName}) {
+function CarAd({closeAd, visible, carName}) {
 
     return (
-        <div className='CarAd-bg' onClick={() => closeAd(false)}>
+        <div className='CarAd-bg'>
+            <button onClick={() => {closeAd(false); visible('visible');}}>X</button>
             <div className='CarAd-container'>
-                <button onClick={() => closeAd(false)}>X</button>
                 <div className='overview'>
                     <h1>{carName} overview</h1>
                 </div>

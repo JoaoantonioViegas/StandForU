@@ -12,12 +12,14 @@ function Home(props) {
 
     const [carName, setCarName] = useState("");
     const [carYear , setCarYear] = useState("");
+    const [visibility, setVisibility] = useState('visible');
 
     const divOnClick = (item, year) => {
         console.log("divOnClick: " + item + " " + year);
         setCarName(item);
         setCarYear(year);
-        setOpenAd(true)
+        setOpenAd(true);
+        setVisibility('hidden');
     }
 
     var array = [];
@@ -35,11 +37,15 @@ function Home(props) {
 
     return (
         <div className="Home">
-            {openAd && <CarAd closeAd={setOpenAd} carName={carName} carYear={carYear}/>}
+            
             {!openAd && <Navbar link="buyacar"/>}
-            <div className="cars">
-                {!openAd && listCars}
+            <input type={'text'} placeholder={'Search...'} />
+            {openAd && <CarAd closeAd={setOpenAd} visible={setVisibility} carName={carName} carYear={carYear}/>}
+            
+            <div className="cars" style={{visibility:visibility}}>
+                {listCars}
             </div>
+            
             
         </div>
     );
