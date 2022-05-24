@@ -41,7 +41,7 @@ function SellCar() {
           
           <div id="split_right">
               <div class="centered">
-                  <h1>Sell a car</h1>
+                <button className='insertphoto'> Insert Photo </button>
               </div>
           </div>
           
