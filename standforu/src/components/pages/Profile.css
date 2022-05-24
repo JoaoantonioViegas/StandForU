@@ -1,0 +1,197 @@
+
+
+.profilepage{
+    /*não deixar dar scroll */
+    overflow: hidden;
+}
+
+.profile{
+    position: absolute;
+    width: 510px;
+    height: 680px;
+    left: -120px;
+    top: 190px;
+
+    background: #ffffff;
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 40px;
+}
+
+.mycars{
+    position: absolute;
+    width: 600px;
+    height: 680px;
+    left: 440px;
+    top: 190px;
+
+    background: #ffffff;
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 40px;
+
+}
+
+.myreviews{
+    position: absolute;
+    width: 650px;
+    height: 680px;
+    left: 1250px;
+    top: 190px;
+
+    background: #ffffff;
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 40px;
+}
+
+.dados1{
+    position: absolute;
+width: 359px;
+height: 411px;
+left: 90px;
+top: 270px;
+
+font-family: 'Roboto Mono';
+font-style: normal;
+font-weight: 300;
+font-size: 19px;
+line-height: 25px;
+text-align: center;
+
+color: #000000;
+}
+
+.dados2{
+    position: absolute;
+width: 359px;
+height: 411px;
+left: 90px;
+top: 330px;
+
+font-family: 'Roboto Mono';
+font-style: normal;
+font-weight: 300;
+font-size: 19px;
+line-height: 25px;
+text-align: center;
+
+color: #000000;
+}
+
+.dados3{
+    position: absolute;
+width: 359px;
+height: 411px;
+left: 90px;
+top: 390px;
+
+font-family: 'Roboto Mono';
+font-style: normal;
+font-weight: 300;
+font-size: 19px;
+line-height: 25px;
+text-align: center;
+
+color: #000000;
+}
+
+.dados4{
+    position: absolute;
+width: 359px;
+height: 411px;
+left: 90px;
+top: 450px;
+
+font-family: 'Roboto Mono';
+font-style: normal;
+font-weight: 300;
+font-size: 19px;
+line-height: 25px;
+text-align: center;
+
+color: #000000;
+}
+
+.dados5{
+    position: absolute;
+width: 359px;
+height: 411px;
+left: 90px;
+top: 510px;
+
+font-family: 'Roboto Mono';
+font-style: normal;
+font-weight: 300;
+font-size: 19px;
+line-height: 25px;
+text-align: center;
+
+color: #000000;
+}
+
+.myselcars{
+    position: absolute;
+width: 380px;
+height: 86px;
+left: 180px;
+top: -20px;
+
+font-family: 'Roboto Mono';
+font-style: normal;
+font-weight: 300;
+font-size: 30px;
+line-height: 53px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #444444;
+}
+
+.my1car{
+    position: absolute;
+    width: 550px;
+    height: 250px;
+    left: 25px;
+    top: 80px;
+
+    background: #F7F7F7;
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 40px;
+}
+.car1{
+    position: absolute;
+    width: 400px;
+    height: 100px;
+    left: 0px;
+    top: 0px;
+
+    filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.25));
+    border-radius: 20px;
+    }
+
+.imageprofcar{
+    align-self: flex-center;
+    margin-left: 100px;
+    margin-top: 20px;
+    height: 180px;
+    object-fit: cover;
+    width: 365px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.411);
+}
+
+.letrascarro1{
+    position: absolute;
+    width: 359px;
+    height: 411px;
+    left: 90px;
+    top: 190px;
+    
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 25px;
+    text-align: center;
+    
+    color: #000000;
+}
