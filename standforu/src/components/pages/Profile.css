@@ -1,15 +1,15 @@
 
 
-.profilepage{
-    /*não deixar dar scroll */
+/* .profilepage{
     overflow: hidden;
-}
+    overflow-y: hidden;
+} */
 
 .profile{
     position: absolute;
     width: 510px;
     height: 680px;
-    left: -120px;
+    left: -10px;
     top: 190px;
 
     background: #ffffff;
@@ -21,7 +21,7 @@
     position: absolute;
     width: 600px;
     height: 680px;
-    left: 440px;
+    left: 550px;
     top: 190px;
 
     background: #ffffff;
@@ -32,9 +32,9 @@
 
 .myreviews{
     position: absolute;
-    width: 650px;
+    width: 690px;
     height: 680px;
-    left: 1250px;
+    left: 1190px;
     top: 190px;
 
     background: #ffffff;
@@ -46,7 +46,7 @@
     position: absolute;
 width: 359px;
 height: 411px;
-left: 90px;
+left: 60px;
 top: 270px;
 
 font-family: 'Roboto Mono';
@@ -63,7 +63,7 @@ color: #000000;
     position: absolute;
 width: 359px;
 height: 411px;
-left: 90px;
+left: 60px;
 top: 330px;
 
 font-family: 'Roboto Mono';
@@ -80,7 +80,7 @@ color: #000000;
     position: absolute;
 width: 359px;
 height: 411px;
-left: 90px;
+left: 60px;
 top: 390px;
 
 font-family: 'Roboto Mono';
@@ -97,7 +97,7 @@ color: #000000;
     position: absolute;
 width: 359px;
 height: 411px;
-left: 90px;
+left: 60px;
 top: 450px;
 
 font-family: 'Roboto Mono';
@@ -114,7 +114,7 @@ color: #000000;
     position: absolute;
 width: 359px;
 height: 411px;
-left: 90px;
+left: 60px;
 top: 510px;
 
 font-family: 'Roboto Mono';
@@ -148,9 +148,9 @@ color: #444444;
 
 .my1car{
     position: absolute;
-    width: 550px;
-    height: 250px;
-    left: 25px;
+    width: 27vw;
+    height: 230px;
+    left: 40px;
     top: 80px;
 
     background: #F7F7F7;
@@ -161,8 +161,30 @@ color: #444444;
     position: absolute;
     width: 400px;
     height: 100px;
-    left: 0px;
-    top: 0px;
+    left: -15px;
+    top: -10px;
+
+    filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.25));
+    border-radius: 20px;
+    }
+
+.my2car{
+    position: absolute;
+    width: 27vw;
+    height: 230px;
+    left: 40px;
+    top: 380px;
+
+    background: #F7F7F7;
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 40px;
+}
+.car2{
+    position: absolute;
+    width: 400px;
+    height: 100px;
+    left: -15px;
+    top: -10px;
 
     filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.25));
     border-radius: 20px;
@@ -194,4 +216,13 @@ color: #444444;
     text-align: center;
     
     color: #000000;
+}
+
+.fotoperfil{
+        position: absolute;
+        width: 15vw;
+        height: 20vh;
+        left: 5vw;
+        top: 7vh;
+
 }
