@@ -24,15 +24,15 @@ function Profile (){
                     <div className="my1car">
                         <div className="car1"> 
                             <img src={car1} alt="car1" className="imageprofcar"/>
-                            <h2 className="letrascarro1">Jeep Rangler</h2>
+                            {/* <h2 className="letrascarro1">Jeep Rangler</h2> */}
                         </div>
                     </div>
                     <div className="my2car">
-                        <div className="car1"> 
+                        {/* <div className="car1"> 
                             <img src={car2} alt="car1" className="imageprofcar"/>
                             <h2 className="letrascarro1">Toyota corolla</h2>
-                        </div>
-                    </div>
+                        </div> */}
+                    </div> 
             </div>
             <div className="myreviews">
 
