@@ -2,13 +2,16 @@ import React from 'react'
 import {useEffect, useCallback} from 'react'
 import './CarAd.css'
 import { Icon } from '@iconify/react';
+import {motion} from 'framer-motion'
 
-function CarAd({closeAd, visible, carObject}) {
+function CarAd({closeAd, visible, opacity, transition, carObject}) {
 
     const escFunction = useCallback((event) => {
         if (event.keyCode === 27) {
           closeAd(false);
           visible('visible');
+          opacity('1');
+          transition('visibility 0.3s linear,opacity 0.3s linear');
         }
       }, []);
 
@@ -21,8 +24,14 @@ function CarAd({closeAd, visible, carObject}) {
     }, [escFunction]);
 
     return (
-        <div className='CarAd-bg'>
-            <button className='backButton' onClick={() => {closeAd(false); visible('visible');}}>
+        <motion.div 
+        animate={{x:0}}
+        initial={{x:1000}} 
+        exit={{ x:-2000}}
+        transition={{ type: "spring", stiffness: 300, damping: 30}}
+        
+        className='CarAd-bg'>
+            <button className='backButton' onClick={() => {closeAd(false); visible('visible');opacity('1'); transition('visibility 0.3s linear,opacity 0.3s linear') }}>
                 <Icon icon="akar-icons:arrow-left" />
             </button>
             <div className='left-container'>
@@ -71,7 +80,7 @@ function CarAd({closeAd, visible, carObject}) {
                 </div>
             </div>
             
-        </div>
+        </motion.div>
     )
 }
 

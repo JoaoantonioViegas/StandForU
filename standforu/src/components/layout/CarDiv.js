@@ -1,11 +1,12 @@
 import React from "react";
 import './CarDiv.css'
+import {motion} from 'framer-motion';
 
 function CarDiv(props) {
   const { image, info } = props;
 
   return (
-    <div className="carDiv">
+    <motion.div animate={{opacity : 1, y:-10}} initial={{opacity:0}} exit={{opacity:0, y:10}} transition={{ duration:0.3}} className="carDiv">
       <img className="cardiv-image" src={require('../../images/' + image)} alt={image}/>
       <div className="info">
         {info}
@@ -16,7 +17,7 @@ function CarDiv(props) {
           +INFO
         </div>
       </div>
-    </div>
+    </motion.div>
   );  
 }
 
