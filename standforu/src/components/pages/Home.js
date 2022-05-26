@@ -5,23 +5,25 @@ import './Home.css';
 import Cars from "../../database/cars.json"
 import Navbar from "../layout/Navbar";
 import CarAd from "../layout/CarAd";
+import {motion, AnimatePresence} from 'framer-motion';
 
 function Home(props) {
 
     const [openAd, setOpenAd] = useState(false);
 
-    const [carName, setCarName] = useState("");
-    const [carYear , setCarYear] = useState("");
+
     const [visibility, setVisibility] = useState('visible');
     const [searchTerm, setSearchTerm] = useState("");
     const [carObject, setCarObject] = useState({});
+    const [opacity, setOpacity] = useState('1');
+    const [transition, setTransition] = useState('visibility 0.3s linear,opacity 0.3s linear');
 
     const divOnClick = (nome, year) => {
         // console.log("divOnClick: " + nome + " " + year);
-        setCarName(nome);
-        setCarYear(year);
         setOpenAd(true);
         setVisibility('hidden');
+        setOpacity('0');
+        setTransition('none')
         let car = array.find(item => item.nome === nome && item.ano === year)
         setCarObject(car);
     }
@@ -38,6 +40,9 @@ function Home(props) {
         } else if (item.nome.toLowerCase().includes(searchTerm.toLowerCase())) {
             return item
         }
+        else {
+            return null
+        }
     }).map((item,key) => 
         <div className="car" onClick={() => divOnClick(item.nome, item.ano)} key={key}>
             <CarDiv image={item.imagem} info= {<React.Fragment> {item.nome} <br/> {item.ano} <br/> {item.kms + " km"} <br/> {item.preco + " €"}</React.Fragment>}/>
@@ -50,11 +55,14 @@ function Home(props) {
             
             {!openAd && <Navbar link="buyacar"/>}
             <input  className="searchInput" type={'text'} placeholder={'Search...'} onChange={(event) => setSearchTerm(event.target.value)}/>
-            {openAd && <CarAd closeAd={setOpenAd} visible={setVisibility} carObject={carObject}/>}
-            
-            <div className="cars" style={{visibility:visibility}}>
+            <AnimatePresence>
+            {openAd && <motion.div><CarAd closeAd={setOpenAd} visible={setVisibility} opacity={setOpacity} transition={setTransition} carObject={carObject}/></motion.div>}
+            </AnimatePresence>
+            <motion.div className="cars" style={{visibility:visibility, opacity:opacity, transition:transition}}>
+                <AnimatePresence>
                 {listCars}
-            </div>
+                </AnimatePresence>
+            </motion.div>
             
             
         </div>
