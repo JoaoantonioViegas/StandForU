@@ -1,0 +1,10 @@
+.carReview{
+    width: 50vw;
+    background-color: white;
+    min-height: 30vh;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
+}

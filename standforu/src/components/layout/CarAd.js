@@ -1,8 +1,9 @@
 import React from 'react'
-import {useEffect, useCallback} from 'react'
+import {useEffect, useCallback, useState} from 'react'
 import './CarAd.css'
 import { Icon } from '@iconify/react';
 import {motion} from 'framer-motion'
+import CarReview from './CarReview';
 
 function CarAd({closeAd, visible, opacity, transition, carObject}) {
 
@@ -23,6 +24,14 @@ function CarAd({closeAd, visible, opacity, transition, carObject}) {
     };
     }, [escFunction]);
 
+    const[openReview, setOpenReview] = useState(false);
+
+    const reviewButton = () => {
+        console.log("reviewButton");
+        setOpenReview(true);
+    }
+
+
     return (
         <motion.div 
         animate={{x:0}}
@@ -34,6 +43,8 @@ function CarAd({closeAd, visible, opacity, transition, carObject}) {
             <button className='backButton' onClick={() => {closeAd(false); visible('visible');opacity('1'); transition('visibility 0.3s linear,opacity 0.3s linear') }}>
                 <Icon icon="akar-icons:arrow-left" />
             </button>
+            <button className='reviewsButton' onClick={reviewButton}>Reviews about this car</button>
+            {openReview && <motion.div className='reviewPopup'><CarReview carobject={carObject} setopenreview={setOpenReview}/></motion.div>}
             <div className='left-container'>
                 <div className='overview'>
                     <img className="carAd-image" src={require('../../images/'+carObject.imagem)}/>

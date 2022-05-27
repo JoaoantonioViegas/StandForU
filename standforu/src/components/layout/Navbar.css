@@ -39,7 +39,7 @@
 
 .buyacar:hover{
     transition: 0.5s;
-    font-size: 34px;
+    transform: scale(1.05);
 }
 .sellacar{
 
@@ -63,7 +63,7 @@
 
 .sellacar:hover{
     transition: 0.5s;
-    font-size: 34px;
+    transform: scale(1.05);
 }
 .makeareview{
     position: relative;
@@ -86,7 +86,7 @@
 
 .makeareview:hover{
     transition: 0.5s;
-    font-size: 34px;
+    transform: scale(1.05);
 }
 
 .icon{
@@ -109,8 +109,7 @@
 
 .icon:hover{
     transition: 0.5s;
-    font-size: 45px;
-
+    transform: scale(1.05);
 }
 
 .nav-links{

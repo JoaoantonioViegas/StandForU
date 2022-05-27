@@ -19,7 +19,6 @@ function Home(props) {
     const [transition, setTransition] = useState('visibility 0.3s linear,opacity 0.3s linear');
 
     const divOnClick = (nome, year) => {
-        // console.log("divOnClick: " + nome + " " + year);
         setOpenAd(true);
         setVisibility('hidden');
         setOpacity('0');
@@ -46,7 +45,6 @@ function Home(props) {
     }).map((item,key) => 
         <div className="car" onClick={() => divOnClick(item.nome, item.ano)} key={key}>
             <CarDiv image={item.imagem} info= {<React.Fragment> {item.nome} <br/> {item.ano} <br/> {item.kms + " km"} <br/> {item.preco + " €"}</React.Fragment>}/>
-            
         </div>
     );
 
