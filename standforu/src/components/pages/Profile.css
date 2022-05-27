@@ -148,9 +148,9 @@ color: #444444;
     align-items: center;
     position: relative;
     margin:auto;
-    top: 10px;
-    padding-left: 150px;
-    padding-right: 150px;
+    top: 2vh;
+    padding-left: 10vw;
+    padding-right: 10vh;
     width: 10vw;
     height: 25vh;
 
@@ -170,9 +170,9 @@ color: #444444;
     align-items: center;
     position: relative;
     margin:auto;
-    top: 50px;
-    padding-left: 150px;
-    padding-right: 150px;
+    top: 5vh;
+    padding-left: 10vw;
+    padding-right: 10vh;
     width: 10vw;
     height: 25vh;
 
