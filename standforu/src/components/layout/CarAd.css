@@ -4,6 +4,7 @@
 .CarAd-bg{
     width: 100vw;
     height: 100vh;
+    margin: 0;
     background-color: #ebebeb;
     position: fixed;
     display: flex;
@@ -12,11 +13,12 @@
 }
 
 .reviewsButton{
-    position:absolute;
-    top:3vh;
-    right:4vh;
-    background-color: #ffffff;
-    border-radius: 16px;
+    position:absolute;  
+    width: 8%;
+    left:27vw;
+    bottom:9vh;
+    background-color: #4FBFB9;
+    border-radius: 14px;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.211);
     padding: 10px 20px;
     border:none;
@@ -29,6 +31,12 @@
     font-family: 'Roboto Mono', monospace;
     transform: scale(1);
     transition: all 0.3s ease-in-out;
+}
+
+.popupBtn{
+    position: relative;
+    top: 2px;
+    margin-left: 10px;
 }
 
 .reviewPopup{
@@ -90,7 +98,7 @@
 
 .left-container{
     width: 580px;
-    height: 780px;
+    height: 750px;
     border-radius: 2rem;
     background-color: #fff;
     box-shadow: 5px 5px 10px #0000001a;
@@ -101,7 +109,7 @@
 }
 .middle-container{
     width: 480px;
-    height: 780px;
+    height: 750px;
     border-radius: 2rem;
     background-color: #fff;
     box-shadow: 5px 5px 10px #0000001a;
@@ -113,7 +121,7 @@
 
 .right-container{
     width: 480px;
-    height: 780px;
+    height: 750px;
     border-radius: 2rem;
     background-color: #fff;
     box-shadow: 5px 5px 10px #0000001a;
@@ -126,12 +134,12 @@
 
 .backButton{
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 0;
+    left: 2vw;
     background:transparent;
     border: none;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     font-size: 36px;
     color: #4FBFB9;
     transform: scale(1);
@@ -142,6 +150,6 @@
     cursor: pointer;
     background:transparent;
     border: none;
-    transform: scale(1.2);
+    transform: scale(1.1);
     transition: transform 0.3s ease-in-out;
 }

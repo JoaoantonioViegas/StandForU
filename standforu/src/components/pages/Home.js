@@ -52,7 +52,7 @@ function Home(props) {
         <div className="Home">
             
             {!openAd && <Navbar link="buyacar"/>}
-            <input  className="searchInput" type={'text'} placeholder={'Search...'} onChange={(event) => setSearchTerm(event.target.value)}/>
+            {!openAd && <input  className="searchInput" type={'text'} placeholder={'Search...'} onChange={(event) => setSearchTerm(event.target.value)}/>}
             <AnimatePresence>
             {openAd && <motion.div><CarAd closeAd={setOpenAd} visible={setVisibility} opacity={setOpacity} transition={setTransition} carObject={carObject}/></motion.div>}
             </AnimatePresence>

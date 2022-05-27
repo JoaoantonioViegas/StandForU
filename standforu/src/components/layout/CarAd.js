@@ -43,9 +43,10 @@ function CarAd({closeAd, visible, opacity, transition, carObject}) {
             <button className='backButton' onClick={() => {closeAd(false); visible('visible');opacity('1'); transition('visibility 0.3s linear,opacity 0.3s linear') }}>
                 <Icon icon="akar-icons:arrow-left" />
             </button>
-            <button className='reviewsButton' onClick={reviewButton}>Reviews about this car</button>
+            
             {openReview && <motion.div className='reviewPopup'><CarReview carobject={carObject} setopenreview={setOpenReview}/></motion.div>}
             <div className='left-container'>
+                <button className='reviewsButton' onClick={reviewButton}>Reviews<Icon icon="entypo:popup" className='popupBtn'/></button>
                 <div className='overview'>
                     <img className="carAd-image" src={require('../../images/'+carObject.imagem)}/>
                     <h1 className='car-name'>{carObject.nome}</h1>

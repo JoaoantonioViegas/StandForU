@@ -53,7 +53,7 @@
     border-top: 0;
     font-size: 30px;
     position:absolute;
-    top:150px;
+    top:14vh;
     left: 61vw;
     transform: scale(1);
     transition: transform 0.4s ease-in-out;

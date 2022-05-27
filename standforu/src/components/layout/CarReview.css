@@ -7,4 +7,20 @@
     align-items: center;
     text-align: center;
     vertical-align: middle;
+    padding-top: 20px;
+}
+
+.closeButton-div{
+    text-align: end;
+    width: 100%;
+    font-size: 30px;
+    color: #646464;
+    cursor: pointer;
+}
+
+.closeButton-btn{
+    font-size: 30px;
+    color: #4FBFB9;
+    cursor: pointer;
+    margin-right: 20px;
 }

@@ -42,7 +42,6 @@
     transform: scale(1.05);
 }
 .sellacar{
-
     position: relative;
     width: 283.64px;
     height: 84px;
@@ -55,10 +54,11 @@
     line-height: 47px;
     display: flex;
     align-items: center;
-    text-align: center;
+    text-align: center; 
     text-decoration: none;
 
     color: #ffffff;
+    transition: 0.5s;
 }
 
 .sellacar:hover{
@@ -109,7 +109,7 @@
 
 .icon:hover{
     transition: 0.5s;
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 .nav-links{
