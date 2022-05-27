@@ -32,7 +32,7 @@ function Navbar(props){
                         <Link to='/Sell-car' className='sellacar' style={{color:sellColor}}> Sell a car</Link>
                         <Link to='/Make-review' className='makeareview' style={{color:reviewColor}}> Make a review</Link>
                         <Link to='/Profile' className='icon' style={{color:'#646464'}}> 
-                            <Icon icon="akar-icons:person" height="36" hFlip={true} style={{color:profileColor}}/>
+                            <Icon icon="akar-icons:person" hFlip={true} style={{color:profileColor}}/>
                         </Link>
                     </nav>
                 </Container>

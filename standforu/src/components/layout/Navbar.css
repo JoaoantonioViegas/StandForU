@@ -1,24 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&family=Saira+Stencil+One&display=swap');
 
 .home{
-position: absolute;
-width: 419px;
-height: 144px;
-left: 100px;
-top: 1.7vh;
+    position: absolute;
+    width: 419px;
+    height: 144px;
+    left: 100px;
+    top: 1.7vh;
 
-font-family: 'Saira Stencil One';
-font-style: normal;
-font-weight: 400;
-font-size: 60px;
-line-height: 126px;
-text-decoration: none;
+    font-family: 'Saira Stencil One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 126px;
+    text-decoration: none;
 
-color: #4FBFB9;
+    color: #4FBFB9;
 }
 
 .buyacar{
-    
+    transition: 0.5s;
     position: relative;
     width: 283.64px;
     height: 84px;
@@ -37,6 +37,10 @@ color: #4FBFB9;
     color: #ffffff;
 }
 
+.buyacar:hover{
+    transition: 0.5s;
+    font-size: 34px;
+}
 .sellacar{
 
     position: relative;
@@ -56,22 +60,34 @@ color: #4FBFB9;
 
     color: #ffffff;
 }
+
+.sellacar:hover{
+    transition: 0.5s;
+    font-size: 34px;
+}
 .makeareview{
     position: relative;
-width: 283.64px;
-height: 84px;
-left: 25vh;
+    width: 283.64px;
+    height: 84px;
+    left: 25vh;
 
-font-family: 'Roboto Mono';
-font-style: normal;
-font-weight: 300;
-font-size: 30px;
-display: flex;
-align-items: center;
-text-align: center;
-text-decoration: none;
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
 
-color: #ffffff;}
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+.makeareview:hover{
+    transition: 0.5s;
+    font-size: 34px;
+}
 
 .icon{
     position: relative;
@@ -87,8 +103,14 @@ color: #ffffff;}
     display: flex;
     align-items: center;
     text-align: center;
-    
+    transition: 0.5s;
     color: #ffffff;;
+}
+
+.icon:hover{
+    transition: 0.5s;
+    font-size: 45px;
+
 }
 
 .nav-links{
