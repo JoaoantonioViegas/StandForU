@@ -1,20 +1,29 @@
 import React, { Component } from "react";
 import Navbar from '../layout/Navbar'
 import './Sellcar.css';
+import { Icon } from '@iconify/react';
 
 class SellCar extends Component {
+
   constructor(props) {
     super(props);
     this.state = {
       image: null
     };
+    this.openAd = false;
 
    // if we are using arrow function binding in not required
     this.onImageChange = this.onImageChange.bind(this);
   }
-
+  saveImage = (event) => {
+    /* console "saveimage" */
+    console.log("saveimage");
+  }
+  
   onImageChange = event => {
     if (event.target.files && event.target.files[0]) {
+      /* openAd = true; */
+      this.openAd = true;
       let img = event.target.files[0];
       this.setState({
         image: URL.createObjectURL(img)
@@ -28,7 +37,7 @@ class SellCar extends Component {
           <Navbar link="sellacar"/>
           <body>
             <div id="split_left">
-                <div class="centered">
+                <div class="left">
                     <h1>Sell a car</h1>
                     <input type="input" class="form__field1" placeholder="" name="brand" id='brand' required />
                     <label for="brand" class="form__label1">Brand</label>
@@ -61,11 +70,14 @@ class SellCar extends Component {
             
             <div id="split_right">
                 <div class="centered">
-                  <div className="div-upload">
-                    <img className="upload-image" src={this.state.image} />
+                  <div className="iconphoto">
+                  {!this.openAd && <Icon icon="bytesize:photo" color="#FFFFFF" height="100%"/>}
                   </div>
-                  <h1>Select Image</h1>
-                  <label className="labelfile"><input type="file" name="myImage" onChange={this.onImageChange} /></label>
+                  <div className="div-upload">
+                    <img className="upload-image" alt="" src={this.state.image} />
+                  </div>
+                  <label className="file"><input type="file" name="myImage" onChange={this.onImageChange}/>Upload Photo</label>
+                  <input type="submit" name="submit" onChange={this.saveImage} />
                 </div>
             </div>
             
