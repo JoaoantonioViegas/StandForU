@@ -129,16 +129,15 @@ color: #000000;
 
 .myselcars{
 align-items: center;
-padding-top: 10px;
-padding-left: 150px;
-padding-right: 150px;
+padding-top: 0vh;
+padding-left: 8vw;
+padding-right: 7vw;
 font-family: 'Roboto Mono';
 font-style: normal;
 font-weight: 300;
-font-size: 30px;
-line-height: 53px;
+font-size: 1.5vw;
+/* line-height: 53px; */
 display: flex;
-align-items: center;
 text-align: center;
 
 color: #444444;
