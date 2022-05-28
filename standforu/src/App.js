@@ -6,6 +6,8 @@ import './components/pages/Home.css'
 import SellCar from './components/pages/SellCar.js'
 import Makeareview from './components/pages/Makeareview.js'
 import Profile from './components/pages/Profile.js';
+import Login from './components/pages/login.js';
+import Register from './components/pages/register.js';
 
 import Container from './components/layout/Container.js';
 // import Navbar from './components/layout/Navbar.js';
@@ -20,6 +22,8 @@ function App() {
             <Route exact path="/Sell-car" element={<SellCar/>} />
             <Route exact path="/Make-review" element= {<Makeareview/>}/>
             <Route exact path="/Profile" element= {<Profile/>}/>
+            <Route exact path="/Login" element= {<Login/>}/>
+            <Route exact path="/Register" element= {<Register/>}/>
           </Routes>
         </Container>
       </Router>

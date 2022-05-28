@@ -408,7 +408,11 @@ input[type=Submit]:hover{
     transform: translate(-50%, -50%);
     text-align: left;
 }
-
+.buyandcell{
+    position: relative;
+    left: 24%;
+    text-align: center;
+}
 .centered {
     width: 80%;
     position: absolute;

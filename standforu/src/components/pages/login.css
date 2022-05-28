@@ -1,0 +1,57 @@
+.loginpage{
+    text-decoration: none;
+}
+.btn_login{
+    position: relative;
+    left: 42%;
+}
+.btn_register{
+    position: relative;
+    left: 35%;
+}
+
+h1{
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 53px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #444444;
+}
+.label_btn{
+    /* position elements horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* put an space between the elements in this div */
+    margin: 10vh 0;
+
+}
+.btn_login_div{
+    width: 40%;
+    padding: 8px 2px;
+    background-color: #4FBFB9;
+    border-radius:  20px;
+    border: none;
+    text-decoration: none;
+    color: white;
+}
+.btn_login_div:hover{
+    background-color: #28615e;
+}
+
+.btn_register_div{
+    width: 40%;
+    padding: 8px 2px;
+    background-color: #4FBFB9;
+    border-radius:  20px;
+    border: none;
+    text-decoration: none;
+    color: white;
+}
+.btn_register_div:hover{
+    background-color: #28615e;
+}
