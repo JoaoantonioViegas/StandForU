@@ -16,9 +16,11 @@ function CarReview({carobject, setopenreview}) {
             <Icon icon="ep:close-bold" onClick={() => {setopenreview(false)}} className='closeButton-btn'/>
         </div>
         <div className='carReview-container'>
-          Car reviews...
+          reivew text
         </div>
+        
     </motion.div>
+    
   )
 }
 
