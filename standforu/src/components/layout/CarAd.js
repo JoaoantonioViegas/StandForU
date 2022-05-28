@@ -2,7 +2,7 @@ import React from 'react'
 import {useEffect, useCallback, useState} from 'react'
 import './CarAd.css'
 import { Icon } from '@iconify/react';
-import {motion} from 'framer-motion'
+import {motion, AnimatePresence} from 'framer-motion'
 import CarReview from './CarReview';
 
 function CarAd({closeAd, visible, opacity, transition, carObject}) {
@@ -37,14 +37,16 @@ function CarAd({closeAd, visible, opacity, transition, carObject}) {
         animate={{x:0}}
         initial={{x:1000}} 
         exit={{ x:-2000}}
-        transition={{ type: "spring", stiffness: 300, damping: 30}}
+        transition={{ type: "spring", stiffness: 380, damping: 30}}
         
         className='CarAd-bg'>
             <button className='backButton' onClick={() => {closeAd(false); visible('visible');opacity('1'); transition('visibility 0.3s linear,opacity 0.3s linear') }}>
                 <Icon icon="akar-icons:arrow-left" />
             </button>
-            
-            {openReview && <motion.div className='reviewPopup'><CarReview carobject={carObject} setopenreview={setOpenReview}/></motion.div>}
+            <AnimatePresence>
+                {openReview && <motion.div className='reviewPopup'><CarReview carobject={carObject} setopenreview={setOpenReview}/></motion.div>}
+            </AnimatePresence>
+
             <div className='left-container'>
                 <button className='reviewsButton' onClick={reviewButton}>Reviews<Icon icon="entypo:popup" className='popupBtn'/></button>
                 <div className='overview'>
