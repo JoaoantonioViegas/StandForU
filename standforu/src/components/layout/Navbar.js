@@ -1,11 +1,25 @@
 import {Link} from 'react-router-dom';
 import Container from './Container';
+import React, { useEffect } from 'react';
 
 import  './Navbar.css';
 import { Icon } from '@iconify/react';
 import "@fontsource/roboto-mono";
 
 function Navbar(props){
+
+    console.log(props);
+
+    const [logged, setLogged] = React.useState('/login');
+
+    useEffect(() => {
+        if(props.loggedIn){
+            setLogged('/profile');
+        } else {
+            setLogged('/login');
+        }
+    }, [props.loggedIn]);
+
 
     var buyColor = "#FFFFFF";
     var sellColor = "#FFFFFF";
@@ -20,6 +34,8 @@ function Navbar(props){
         reviewColor = "#646464";
     } else if (props.link === "profile"){
         profileColor = "#646464";
+    } else if (props.link === "login"){
+        profileColor = "#646464";
     }
 
 
@@ -29,9 +45,10 @@ function Navbar(props){
                     <Link to='/' className='home'> StandForU</Link>
                     <nav className='nav-links'>
                         <Link to='/' className='buyacar' style={{color:buyColor}}> Buy a car</Link>
-                        <Link to='/Sell-car' className='sellacar' style={{color:sellColor}}> Sell a car</Link>
-                        <Link to='/Make-review' className='makeareview' style={{color:reviewColor}}> Make a review</Link>
-                        <Link to='/Login' className='icon' style={{color:'#646464'}}> 
+                        <Link to='/sell-car' className='sellacar' style={{color:sellColor}}> Sell a car</Link>
+                        <Link to='/make-review' className='makeareview' style={{color:reviewColor}}> Make a review</Link>
+
+                        <Link to={logged} className='icon' style={{color:'#646464'}}> 
                             <Icon icon="akar-icons:person" hFlip={true} style={{color:profileColor}}/>
                         </Link>
                     </nav>

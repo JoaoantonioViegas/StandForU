@@ -3,13 +3,24 @@ import Navbar from "../layout/Navbar"
 import'./Profile.css'
 import car1 from '../../images/jeep-wrangler-2006.jpg'
 import car2 from '../../images/corolla.jpg'
-import fotoperfil from '../../images/fotoperfil.png'    
+import fotoperfil from '../../images/fotoperfil.png'  
+import { useNavigate } from "react-router-dom";  
 
 
-function Profile (){
+function Profile (props){
+
+    let navigate = useNavigate();
+
+    const handleLogout = (e) => {
+        e.preventDefault();
+        props.setLoggedIn(false);
+        // redirect to /profile using Navigate 
+        navigate(`/`);
+    }
+
     return (
         <div className="profilepage">
-            <Navbar link="profile"/>
+            <Navbar link="profile" loggedIn={props.loggedIn}/>
             <div className="profile">
                 <img src={fotoperfil} className="fotoperfil"/>
                 <h2 className="dados1">João Viegas</h2>
@@ -37,6 +48,7 @@ function Profile (){
             <div className="myreviews">
                 <h1 className="myrev">My Reviews</h1>
             </div>
+            <button className="logout-button" onClick={handleLogout}>Logout</button>
         </div>
         
 

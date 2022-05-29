@@ -34,7 +34,7 @@ class SellCar extends Component {
   render() {
     return (
       <div>
-          <Navbar link="sellacar"/>
+          <Navbar link="sellacar" loggedIn={this.props.loggedIn}/>
           <body>
             <div id="split_left">
                 <div class="left">

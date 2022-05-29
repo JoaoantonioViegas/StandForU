@@ -10,6 +10,15 @@
     left: 35%;
 }
 
+.left{
+    position: absolute;
+    top:30vh;
+}
+.centered{
+    position: absolute;
+    top:30vh;
+}
+
 h1{
     font-family: 'Roboto Mono';
     font-style: normal;

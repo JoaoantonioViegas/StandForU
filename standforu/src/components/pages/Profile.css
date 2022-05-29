@@ -15,6 +15,7 @@
     background: #ffffff;
     box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1);
     border-radius: 40px;
+    margin: 0;
 }
 
 .mycars{
@@ -27,6 +28,7 @@
     background: #ffffff;
     box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1);
     border-radius: 40px;
+    margin: 0;
 
 }
 
@@ -40,46 +42,45 @@
     background: #ffffff;
     box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1);
     border-radius: 40px;
+    margin: 0;
 }
 
 .dados1{
     position: absolute;
-width: 359px;
-height: 411px;
-right: 3vw;
-top: 270px;
+    width: 359px;
+    right: 3vw;
+    top: 270px;
 
-font-family: 'Roboto Mono';
-font-style: normal;
-font-weight: 300;
-font-size: 19px;
-line-height: 25px;
-text-align: center;
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 25px;
+    text-align: center;
 
-color: #000000;
+    color: #000000;
+    margin:0;
 }
 
 .dados2{
     position: absolute;
-width: 359px;
-height: 411px;
-right: 3vw;
-top: 330px;
+    width: 359px;
+    right: 3vw;
+    top: 330px;
 
-font-family: 'Roboto Mono';
-font-style: normal;
-font-weight: 300;
-font-size: 19px;
-line-height: 25px;
-text-align: center;
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 25px;
+    text-align: center;
 
-color: #000000;
+    color: #000000;
 }
 
 .dados3{
     position: absolute;
 width: 359px;
-height: 411px;
 right: 3vw;
 top: 390px;
 
@@ -96,7 +97,6 @@ color: #000000;
 .dados4{
     position: absolute;
 width: 359px;
-height: 411px;
 right: 3vw;
 top: 450px;
 
@@ -113,7 +113,6 @@ color: #000000;
 .dados5{
     position: absolute;
 width: 359px;
-height: 411px;
 right: 3vw;
 top: 510px;
 
@@ -175,8 +174,7 @@ color: #444444;
     position: relative;
     text-align: center;
     padding-bottom: 2vh;
-    width: 70vw;
-    filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.25));
+    margin-top: 16px;
     border-radius: 20px;
     }
 
@@ -221,9 +219,6 @@ color: #444444;
 .letrascarro1{
     /* position: relative; */
     width: 290px;
-    height: 11px;
-    left: 90px;
-    top: 0px;
     /* centrar a div em relação a outra div */
     margin: auto;
     justify-content: center;
@@ -234,6 +229,8 @@ color: #444444;
     font-size: 19px;
     line-height: 25px;
     text-align: center;
+    margin-top: 10px;
+    margin-bottom: 0;
     
     color: #000000;
 }
@@ -246,3 +243,29 @@ color: #444444;
         top: 7vh;
 
 }
+
+.logout-button{
+    position:absolute;  
+    width: 7%;
+    left:16.7vw;
+    top:22vh;
+    background-color: #4FBFB9;
+    border-radius: 14px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.211);
+    padding: 10px 20px;
+    border:none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: 'Roboto Mono', monospace;
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+}
+.logout-button:hover{
+    transform:scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+

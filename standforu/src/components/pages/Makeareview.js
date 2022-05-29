@@ -1,10 +1,10 @@
 import React from 'react'
 import Navbar from '../layout/Navbar' 
 import './Makereview.css'
-function Makeareview() {
+function Makeareview(props) {
   return (
-    <div className='Review_page'>
-        <Navbar link="makeareview"/>
+    <div className='Review_page' >
+        <Navbar link="makeareview" loggedIn={props.loggedIn}/>
         <div className='Review_page_container_left'>
             <div className='components'>
 
