@@ -10,13 +10,19 @@
     left: 35%;
 }
 
-.left{
+.left-login{
     position: absolute;
-    top:30vh;
+    left: 10vw;
 }
-.centered{
+.centered-login{
     position: absolute;
-    top:30vh;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    left: 10vh;
+}
+.buysell{
+    margin-left: 10%;
 }
 
 h1{

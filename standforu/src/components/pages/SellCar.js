@@ -35,7 +35,7 @@ class SellCar extends Component {
     return (
       <div>
           <Navbar link="sellacar" loggedIn={this.props.loggedIn}/>
-          <body>
+          
             <div id="split_left">
                 <div class="left">
                     <h1>Sell a car</h1>
@@ -80,8 +80,7 @@ class SellCar extends Component {
                   <input type="submit" name="submit" onChange={this.saveImage} />
                 </div>
             </div>
-            
-        </body>
+          
       </div>
     )
   }

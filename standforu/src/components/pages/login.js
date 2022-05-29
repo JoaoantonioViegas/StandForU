@@ -29,7 +29,7 @@ function Login ({loggedIn, setLoggedIn}){
         <div className="loginpage">
             <Navbar link="login" loggedIn={loggedIn}/>
             <div id="split_left">
-                <div className="left">
+                <div className="left-login">
                     <h1 className="logintitle">Login</h1>
                     <input type="input" className="form__field1" placeholder="" name="username" id='username' required />
                     <label className="form__label1"><Icon icon="ant-design:user-outlined" color="#4fbfb9" />   User</label>
@@ -44,9 +44,9 @@ function Login ({loggedIn, setLoggedIn}){
             </div>
             
             <div id="split_right">
-                <div className="centered">
-                    <Icon icon="ant-design:car-filled" color="#4fbfb9" width="200" />
-                    <h1 className="buyandcell">Buy and Sell Cars</h1>
+                <div className="centered-login">
+                    <Icon icon="ion:car-sport-outline" color="#4fbfb9" width="260" />
+                    <h1 className="buysell">Buy, Sell and Review Cars</h1>
                 </div>
             </div>
         </div>
