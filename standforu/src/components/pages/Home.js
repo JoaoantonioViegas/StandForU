@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import CarDiv from "../layout/CarDiv";
 import './Home.css';
 import Cars from "../../database/cars.json"
+import Reviews from "../../database/reviews.json"
 import Navbar from "../layout/Navbar";
 import CarAd from "../layout/CarAd";
 import {motion, AnimatePresence} from 'framer-motion';
@@ -12,6 +13,8 @@ function Home(props) {
 
     const [openAd, setOpenAd] = useState(false);
 
+    const[activeTab, setActiveTab] = useState(0);
+
 
     const [visibility, setVisibility] = useState('visible');
     const [searchTerm, setSearchTerm] = useState("");
@@ -19,51 +22,104 @@ function Home(props) {
     const [opacity, setOpacity] = useState('1');
     const [transition, setTransition] = useState('visibility 0.3s linear,opacity 0.3s linear');
 
-    const divOnClick = (nome, year) => {
+
+    //Onclick open car ad 
+    const divOnClick = (marca, modelo, year) => {
         setOpenAd(true);
         setVisibility('hidden');
         setOpacity('0');
         setTransition('none')
-        let car = array.find(item => item.nome === nome && item.ano === year)
+        let car = array.find(item => item.marca === marca && item.modelo === modelo && item.ano === year)
         setCarObject(car);
     }
 
+
+    //car Json into array
     var array = [];
     Object.keys(Cars).forEach(function (key) {
         array.push(Cars[key]);
 
     });
 
-    const listCars = array.filter((item) => {
+    //Review Json into array
+    var rev_array = [];
+    Object.keys(Reviews).forEach(function (key) {
+        rev_array.push(Reviews[key]);
+
+    });
+
+    //Filter reviews based on input
+    const listReviews = rev_array.filter((item) => {
+        var search = searchTerm.toLowerCase().replace(/\s/g, '');
+        var car1 = item.marca.toLowerCase()+item.modelo.toLowerCase()+item.ano.toLowerCase().replace(/\s/g, '');
+        var car2 = item.marca.toLowerCase()+item.ano.toLowerCase().replace(/\s/g, '');
+        var car3 = item.modelo.toLowerCase()+item.ano.toLowerCase().replace(/\s/g, '');
         if(searchTerm === ""){
             return item
-        } else if (item.nome.toLowerCase().includes(searchTerm.toLowerCase())) {
+        } else if (car1.includes(search) || car2.includes(search) || car3.includes(search)){
             return item
         }
         else {
             return null
         }
     }).map((item,key) => 
-        <div className="car" onClick={() => divOnClick(item.nome, item.ano)} key={key}>
-            <CarDiv image={item.imagem} info= {<React.Fragment> {item.nome} <br/> {item.ano} <br/> {item.kms + " km"} <br/> {item.preco + " €"}</React.Fragment>}/>
+    <Embed_reviews title={item.autor +  ' - ' + item.marca + " " + item.modelo + '(' + item.ano + ')'} description={item.comentario}></Embed_reviews>
+                   
+    );
+
+    //Filter cars based on input
+    const listCars = array.filter((item) => {
+        var search = searchTerm.toLowerCase().replace(/\s/g, '');
+        var car1 = item.marca.toLowerCase()+item.modelo.toLowerCase()+item.ano.toLowerCase().replace(/\s/g, '');
+        var car2 = item.marca.toLowerCase()+item.ano.toLowerCase().replace(/\s/g, '');
+        var car3 = item.modelo.toLowerCase()+item.ano.toLowerCase().replace(/\s/g, '');
+        if(searchTerm === ""){
+            return item
+        } else if (car1.includes(search) || car2.includes(search) || car3.includes(search)) {
+            return item
+        }
+        else {
+            return null
+        }
+    }).map((item,key) => 
+        <div className="car" onClick={() => divOnClick(item.marca, item.modelo, item.ano)} key={key}>
+            <CarDiv image={item.imagem} info= {<React.Fragment> {item.marca + " " + item.modelo} <br/> {item.ano} <br/> {item.kms + " km"} <br/> {item.preco + " €"}</React.Fragment>}/>
         </div>
     );
 
+
+
     return (
         <div className="Home">
+            {!openAd && <div className="tabs">
+                <div className="activeCars" onClick={() => setActiveTab(0)} style={{textDecoration: activeTab === 0? 'underline': '', color:activeTab===0? '#4FBFB9': '#646464'}}>
+                    Cars
+                </div>
+                <div className="activeReviews" onClick={() => setActiveTab(1)} style={{textDecoration: activeTab === 1? 'underline': '', color:activeTab===1? '#4FBFB9': '#646464'}}>
+                    Reviews
+                </div>
+            </div>}
             
             {!openAd && <Navbar link="buyacar" loggedIn= {props.loggedIn}/>}
+
             {!openAd && <input  className="searchInput" type={'text'} placeholder={'Search...'} onChange={(event) => setSearchTerm(event.target.value)}/>}
+
             <AnimatePresence>
             {openAd && <motion.div><CarAd closeAd={setOpenAd} visible={setVisibility} opacity={setOpacity} transition={setTransition} carObject={carObject}/></motion.div>}
             </AnimatePresence>
-            <motion.div className="cars" style={{visibility:visibility, opacity:opacity, transition:transition}}>
+
+            {activeTab===0 && <motion.div className="cars" style={{visibility:visibility, opacity:opacity, transition:transition}}>
                 <AnimatePresence>
                 {listCars}
                 </AnimatePresence>
-            </motion.div>
+            </motion.div>}
             
-            <Embed_reviews title={'Josh Silva - Audi A1(2019)'} description={'I have this car, it’s very confotable and economic. I managed to average 6,1L/100km driving in town. Regarding costs, Audi is a bit expensive, and the inspection is about 300€. Once i had to replace a rim and because it was an original, I had to pay 500€. Overall, very happy with this car.'}></Embed_reviews>
+            {activeTab===1 && <motion.div className="Comments">
+                <AnimatePresence>
+                    {listReviews}
+                </AnimatePresence>
+            </motion.div>}
+    
         </div>
     );
 }

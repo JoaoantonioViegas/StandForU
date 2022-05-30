@@ -50,7 +50,7 @@ function CarAd({closeAd, visible, opacity, transition, carObject}) {
             <div className='left-container'>
                 <div className='overview'>
                     <img className="carAd-image" src={require('../../images/'+carObject.imagem)}/>
-                    <h1 className='car-name'>{carObject.nome}</h1>
+                    <h1 className='car-name'>{carObject.marca + " " + carObject.modelo}</h1>
                 </div>
                 <div className='car-info'>
                     <p><em style={{fontStyle:'normal', fontWeight:'bold'}}>Evaluation:</em> 5 star</p>
