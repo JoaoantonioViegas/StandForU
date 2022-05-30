@@ -63,8 +63,8 @@ class SellCar extends Component {
                     <input type="input" class="form__field8" placeholder="" name="horse_power" id='horse_power' required />
                     <label for="horse_power" class="form__label8">Horse Power</label>
 
-                    <textarea  type="input" class="form__field9" placeholder="" name="description" id='description' required  cols="40" rows="5"></textarea>
-                    <label for="description" class="form__label9">Description</label>
+                    <textarea  type="input" class="form__field15" placeholder="" name="description" id='description' required  cols="40" rows="5"></textarea>
+                    <label for="description" class="form__label15">Description</label>
                 </div>
             </div>
             

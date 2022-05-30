@@ -6,7 +6,7 @@ import './components/pages/Home.css'
 import SellCar from './components/pages/SellCar.js'
 import Makeareview from './components/pages/Makeareview.js'
 import Profile from './components/pages/Profile.js';
-import Login from './components/pages/Login.js';
+import Login from './components/pages/login.js';
 import Register from './components/pages/register.js';
 
 import Container from './components/layout/Container.js';

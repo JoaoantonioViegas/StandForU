@@ -339,12 +339,12 @@ input[type=Submit]:hover{
     box-shadow: none;
 }
 /* ------------------------------DIVIDE 9 */
-.form__field9:focus {
+.form__field15:focus {
     border-width: 3px;
     border-image: linear-gradient(to right, #11998e, #38ef7d);
     border-image-slice: 1;
 }
-.form__field9 {
+.form__field15 {
     font-family: inherit;
     width: 100%;
     margin-bottom: 100px;
@@ -360,24 +360,24 @@ input[type=Submit]:hover{
     resize: none;
     
 }
-.form__field9:required:valid ~ .form__label9 {
+.form__field15:required:valid ~ .form__label15 {
     left: -6vw;
-    top: -14vh;
+    top: -28vh;
 }
-.form__label9 {
+.form__label15 {
     position: relative;
-    top: -3vh;
+    top: -14vh;
     left: 0;
     transition: 0.2s;
     font-size: 1rem;
     color: rgb(133, 133, 133);
 }
-.form__field9:focus ~ .form__label9{
+.form__field15:focus ~ .form__label15{
     left: -6vw;
     transition: 0.5s;
-    top: -14vh;
+    top: -24vh;
 }
-.form__field9:required, .form__field9:invalid {
+.form__field15:required, .form__field15:invalid {
     box-shadow: none;
 }
 
@@ -387,7 +387,7 @@ input[type=Submit]:hover{
     width: 50%;
     left: 0;
     height: 100%;
-    top : 23%;
+    top : 200px;
     height: 77%;
     COLOR : rgb(0, 0, 0);
     /* background-color: #b9b0b0; */
