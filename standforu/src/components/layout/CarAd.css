@@ -88,7 +88,6 @@
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.411);
 }
 
-
 .stand-image{
     position: inherit;
     width: 94%;
@@ -136,7 +135,7 @@
 
 .backButton{
     position: absolute;
-    top: 0;
+    top: 2vh;
     left: 2vw;
     background:transparent;
     border: none;
