@@ -269,3 +269,29 @@ color: #444444;
     transition: all 0.3s ease-in-out;
 }
 
+
+.trash{
+    position: absolute;
+    width: 2vh;
+    height: 2vh;
+    right: 1vw;
+    top: 2vh;
+    align-items: center;
+    text-decoration: none;
+
+    position:absolute;  
+    background-color: #FF5D5D;
+    border-radius: 14px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.211);
+    padding: 10px 10px;
+    border:none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: 'Roboto Mono', monospace;
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+}
