@@ -6,6 +6,7 @@ import Cars from "../../database/cars.json"
 import Navbar from "../layout/Navbar";
 import CarAd from "../layout/CarAd";
 import {motion, AnimatePresence} from 'framer-motion';
+import Embed_reviews from "../layout/Embed_reviews";
 
 function Home(props) {
 
@@ -62,7 +63,7 @@ function Home(props) {
                 </AnimatePresence>
             </motion.div>
             
-            
+            <Embed_reviews title={'Josh Silva - Audi A1(2019)'} description={'I have this car, it’s very confotable and economic. I managed to average 6,1L/100km driving in town. Regarding costs, Audi is a bit expensive, and the inspection is about 300€. Once i had to replace a rim and because it was an original, I had to pay 500€. Overall, very happy with this car.'}></Embed_reviews>
         </div>
     );
 }
