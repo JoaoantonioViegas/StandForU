@@ -1,7 +1,20 @@
 import React from 'react'
 import Navbar from '../layout/Navbar' 
 import './Makereview.css'
+import { useNavigate } from "react-router-dom";  
 function Makeareview(props) {
+  let navigate = useNavigate();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    //verificar que o input brand, model, year, review não estão vazios
+    if(document.getElementById('brand').value === "" || document.getElementById('model').value === "" || document.getElementById('year').value === "" || document.getElementById('review').value === ""){
+      alert("Please fill all the fields");
+    }else{
+      alert("Review addedn successfully");
+      navigate(`/`);
+    }
+  }
+
   return (
     <div className='Review_page' >
         <Navbar link="makeareview" loggedIn={props.loggedIn}/>
@@ -36,7 +49,7 @@ function Makeareview(props) {
               <label for="review" class="MR_form__label4">Review</label>
               </p>
 
-              <label className='MR_btn'>Submit</label>
+              <button onClick={handleSubmit} className='MR_btn'>Submit</button>
 
             </div>
         </div>
