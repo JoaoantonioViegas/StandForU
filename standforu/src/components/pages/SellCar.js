@@ -71,12 +71,15 @@ class SellCar extends Component {
             <div id="split_right">
                 <div class="centered">
                   <div className="iconphoto">
-                  {!this.openAd && <Icon icon="bytesize:photo" color="#FFFFFF" height="100%"/>}
+                    {!this.openAd && <Icon icon="bytesize:photo" color="#4FBFB9" height="100%"/>} 
                   </div>
                   <div className="div-upload">
                     <img className="upload-image" alt="" src={this.state.image} />
                   </div>
+                  <div className="upload_tbn">
                   <label className="file"><input type="file" name="myImage" onChange={this.onImageChange}/>Upload Photo</label>
+                  </div>
+                  
                   <input type="submit" name="submit" onChange={this.saveImage} />
                 </div>
             </div>
