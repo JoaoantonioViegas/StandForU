@@ -48,10 +48,9 @@ function CarAd({closeAd, visible, opacity, transition, carObject}) {
             </AnimatePresence>
 
             <div className='left-container'>
-                <button className='reviewsButton' onClick={reviewButton}>Reviews<Icon icon="entypo:popup" className='popupBtn'/></button>
                 <div className='overview'>
                     <img className="carAd-image" src={require('../../images/'+carObject.imagem)}/>
-                    <h1 className='car-name'>{carObject.nome}</h1>
+                    <h1 className='car-name'>{carObject.marca + " " + carObject.modelo}</h1>
                 </div>
                 <div className='car-info'>
                     <p><em style={{fontStyle:'normal', fontWeight:'bold'}}>Evaluation:</em> 5 star</p>
@@ -63,6 +62,7 @@ function CarAd({closeAd, visible, opacity, transition, carObject}) {
                     <p><em style={{fontStyle:'normal', fontWeight:'bold'}}>Horsepower:</em> 120cv</p>
                     <p><em style={{fontStyle:'normal', fontWeight:'bold'}}>Consumption:</em> 5,9L/100km</p>
                 </div>
+                <button className='reviewsButton' onClick={reviewButton}>Reviews<Icon icon="entypo:popup" className='popupBtn'/></button>
             </div>
             <div className='middle-container'>
                 <div className='car-description'>

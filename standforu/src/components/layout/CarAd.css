@@ -13,9 +13,9 @@
 }
 
 .reviewsButton{
-    position:absolute;  
-    width: 8%;
-    left:27vw;
+    position: relative;  
+    width: 26%;
+    left:22vw;
     bottom:9vh;
     background-color: #4FBFB9;
     border-radius: 14px;
@@ -30,6 +30,11 @@
     cursor: pointer;
     font-family: 'Roboto Mono', monospace;
     transform: scale(1);
+    transition: all 0.3s ease-in-out;
+}
+
+.reviewsButton:hover{
+    transform:scale(1.05);
     transition: all 0.3s ease-in-out;
 }
 
@@ -50,10 +55,7 @@
     z-index: 2;
 
 }
-.reviewsButton:hover{
-    transform:scale(1.05);
-    transition: all 0.3s ease-in-out;
-}
+
 
 .car-name{
     text-align: center;
@@ -85,7 +87,6 @@
     border-radius: 20px;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.411);
 }
-
 
 .stand-image{
     position: inherit;
@@ -134,7 +135,7 @@
 
 .backButton{
     position: absolute;
-    top: 0;
+    top: 2vh;
     left: 2vw;
     background:transparent;
     border: none;
