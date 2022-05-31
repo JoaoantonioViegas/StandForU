@@ -1,3 +1,7 @@
+
+.loginpage{
+    text-decoration: none;
+}
 /* -----------------------------------------*/
 .form__group {
     position: relative;
@@ -455,4 +459,23 @@ input[type=Submit]:hover{
     width: 100%;
     margin-top: -30px;
     height: 60px;
+}
+
+.btn_sub_div{
+    margin-top: 20px;
+    padding: 8px 2px;
+    background-color: #4FBFB9;
+    border-radius:  20px;
+    border: none;
+    text-decoration: none;
+    color: white;
+    
+}
+.btn_sub_div:hover{
+    background-color: #28615e;
+    cursor: pointer;
+}
+
+.btn_sub{
+    position: relative;
 }

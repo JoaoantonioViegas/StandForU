@@ -1,12 +1,14 @@
-import React, { Component } from "react";
+// import React, { Component } from "react";
+import {useNavigate} from 'react-router-dom';
 import Navbar from "../layout/Navbar"
 import'./register.css'
 import {Link} from 'react-router-dom';
 import { Icon } from '@iconify/react';
 import './Sellcar.css'
+import React from 'react';
 
 
-class register extends Component {
+class register extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
@@ -33,11 +35,11 @@ class register extends Component {
         }
       };
 
+
     render(){
         return (
             <div className="loginpage">
                 <Navbar link="register"/>
-                <body>
                 <div id="split_left">
                     <div class="left">-
                         <h1 className="logintitle">Register</h1>
@@ -57,7 +59,8 @@ class register extends Component {
                         <label for="password" class="form__label11"><Icon icon="ant-design:phone-filled" color="#4fbfb9" />Phone Number</label>
 
                         <div className="label_btn">
-                            <div className="btn_register_div"><Link to='/login' className= "btn_register" style={{color:this.color_var}}>Submit</Link></div>
+                          {/* <div className="btn_login_div" onClick={WithNavigate}><div className= "btn_login" style={{color:this.color_var}}>login</div></div>   */}
+                          <div className="btn_register_div"><Link to='/login' className= "btn_register" style={{color:this.color_var}}>Login</Link></div>
                         </div>
                     </div>
                 </div>
@@ -76,7 +79,6 @@ class register extends Component {
                         <label for="description" class="form__label12"><Icon icon="fluent:text-description-20-filled" color="#4fbfb9" />Description</label>
                     </div>
                 </div>
-            </body>
             </div>
             
 

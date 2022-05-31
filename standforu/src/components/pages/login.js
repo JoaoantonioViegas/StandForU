@@ -22,6 +22,9 @@ function Login ({loggedIn, setLoggedIn}){
             alert("Invalid username or password");
         }
     }
+    const handleRegister = (e) => {
+        navigate(`/register`);
+    }
 
 
     var color_var = "#FFFFFF";
@@ -38,7 +41,7 @@ function Login ({loggedIn, setLoggedIn}){
                     <label className="form__label2"><Icon icon="carbon:password" color="#4fbfb9" />   Pass</label>
                     <div className="label_btn">
                         <div className="btn_login_div" onClick={handleLogin}><div className= "btn_login" style={{color:color_var}}>login</div></div>
-                        <div className="btn_register_div"><Link to='/register' className= "btn_register" style={{color:color_var}}>Register</Link></div>
+                        <div className="btn_login_div" onClick={handleRegister}><div className= "btn_login" style={{color:color_var}}>Register</div></div>
                     </div>
                 </div>
             </div>

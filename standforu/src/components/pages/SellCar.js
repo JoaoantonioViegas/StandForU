@@ -1,11 +1,13 @@
-import React, { Component } from "react";
+import React from "react";
 import Navbar from '../layout/Navbar'
 import './Sellcar.css';
+import './login.css';
+import './register.css';
 import { Icon } from '@iconify/react';
 import {Link} from 'react-router-dom';
 
 
-class SellCar extends Component {
+class SellCar extends React.Component {
 
   constructor(props) {
     super(props);
@@ -83,7 +85,7 @@ class SellCar extends Component {
                   <div className="upload_tbn" style={{backgroundColor: this.openAd? 'transparent' : '#FFFFFF'}}>
                     <label className="file"><input type="file" name="myImage" onChange={this.onImageChange}/>Upload Photo</label>
                   </div>
-                  <input  type="submit" name="submit" onChange={this.saveImage}/>
+                  <div className="btn_sub_div"><Link to='/profile' className= "btn_sub" style={{color:"#FFFFFF"}}>Submit</Link></div>
                 </div>
             </div>
           
