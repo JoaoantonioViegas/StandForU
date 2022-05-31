@@ -479,7 +479,9 @@ input[type=Submit]:hover{
 
 .btn_sub{
     position: relative;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
     text-decoration: none;
-    padding-left: 17vw;
-    padding-right: 17vw;
+    padding-left: 18vw;
+    padding-right: 18vw;
 }

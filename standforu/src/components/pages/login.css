@@ -3,17 +3,22 @@
 }
 .btn_login{
     position: relative;
-    left: 42%;
+
+    padding-left: 5vh;
+    padding-right: 5vh;
 }
 .btn_register{
     position: relative;
-    left: 35%;
     text-decoration: none;
+    padding-left: 7.5vh;
+    padding-right: 6vh;
+    
 }
 
 .left-login{
     position: absolute;
     left: 10vw;
+
 }
 .centered-login{
     position: absolute;
@@ -55,6 +60,7 @@ h1{
     border: none;
     text-decoration: none;
     color: white;
+    text-align: center;
 }
 .btn_login_div:hover{
     background-color: #28615e;
