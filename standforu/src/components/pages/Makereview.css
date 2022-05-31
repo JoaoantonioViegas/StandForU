@@ -195,7 +195,7 @@
     resize: none;
 }
 .MR_form__field4:required:valid ~ .MR_form__label4 {
-    left: -34%;
+    left: -36%;
     top : -135px;
 }
 .MR_form__label4 {
@@ -204,11 +204,11 @@
     left: -30%;
     transition: 0.2s;
     font-size: 1rem;
-    color: 444444;
+    color: #444444;
     font-weight: 300;
 }
 .MR_form__field4:focus ~ .MR_form__label4{
-    left: -34%;
+    left: -36%;
     transition: 0.5s;
     top:-135px;
     margin-bottom: green;

@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import Navbar from '../layout/Navbar'
 import './Sellcar.css';
 import { Icon } from '@iconify/react';
+import {Link} from 'react-router-dom';
+
 
 class SellCar extends Component {
 
@@ -24,6 +26,7 @@ class SellCar extends Component {
     if (event.target.files && event.target.files[0]) {
       /* openAd = true; */
       this.openAd = true;
+
       let img = event.target.files[0];
       this.setState({
         image: URL.createObjectURL(img)
@@ -70,17 +73,17 @@ class SellCar extends Component {
             
             <div id="split_right">
                 <div class="centered">
-                  <div className="iconphoto">
+                  <div className="iconphoto" >
                     {!this.openAd && <Icon icon="bytesize:photo" color="#4FBFB9" height="100%"/>} 
                   </div>
-                  <div className="div-upload">
+                  <div className="div-upload" style={{backgroundColor: this.openAd? 'transparent' : '#FFFFFF'}}>
                     <img className="upload-image" alt="" src={this.state.image} />
                   </div>
-                  <div className="space"></div>
-                  <div className="upload_tbn">
+                  <div className="space" style={{backgroundColor: this.openAd? 'transparent' : '#FFFFFF'}} ></div>
+                  <div className="upload_tbn" style={{backgroundColor: this.openAd? 'transparent' : '#FFFFFF'}}>
                     <label className="file"><input type="file" name="myImage" onChange={this.onImageChange}/>Upload Photo</label>
                   </div>
-                  <input type="submit" name="submit" onChange={this.saveImage} />
+                  <input  type="submit" name="submit" onChange={this.saveImage}/>
                 </div>
             </div>
           
