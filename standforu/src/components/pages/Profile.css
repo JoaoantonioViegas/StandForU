@@ -34,15 +34,16 @@
 
 .myreviews{
     position: absolute;
-    width: 62vw;
+    width: 36vw;
     height: 73vh;
-    left: 30vw;
+    left: 64vw;
     top: 20vh;
     overflow-y:scroll;
 
     background: #ffffff;
     box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 40px 40px 0px 0px;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
     margin: 0;
 }
 
@@ -305,7 +306,7 @@ color: #444444;
     grid-gap:1em;
     margin-left:6%;
     margin-right:6%;
-    width: 46%;
+    width: 88%;
   }
 
 .CommentsProfile > div{
