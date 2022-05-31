@@ -10,7 +10,6 @@ input[type=file] {
 }
 .file{
     position: relative;
-    width: 50%;
     padding: 6px 20px;
     box-sizing: border-box;
     border: none;
@@ -431,7 +430,8 @@ input[type=Submit]:hover{
     background-color: #ffffff;
 }
 .upload-image{
-    height: 88%;
+    margin-top: 2px;
+    height: 90%;
     align-self:flex-center;
     object-fit: cover;
     border-radius: 20px;
@@ -450,4 +450,11 @@ input[type=Submit]:hover{
     background-color: #ffffff;
     border-radius: 20px;
     margin-top: -30px;
+}
+
+.space{
+    background-color: rgb(255, 255, 255);
+    width: 100.8%;
+    margin-top: -30px;
+    height: 60px;
 }

@@ -76,10 +76,10 @@ class SellCar extends Component {
                   <div className="div-upload">
                     <img className="upload-image" alt="" src={this.state.image} />
                   </div>
+                  <div className="space"></div>
                   <div className="upload_tbn">
-                  <label className="file"><input type="file" name="myImage" onChange={this.onImageChange}/>Upload Photo</label>
+                    <label className="file"><input type="file" name="myImage" onChange={this.onImageChange}/>Upload Photo</label>
                   </div>
-                  
                   <input type="submit" name="submit" onChange={this.saveImage} />
                 </div>
             </div>
