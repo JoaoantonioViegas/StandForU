@@ -311,11 +311,9 @@ color: #444444;
 
 .CommentsProfile > div{
 background: #bdbdbd;
-padding:1em;
 margin-top: 12px;
 margin-bottom: 12px;
 border-radius: 2vh;
-padding-top: 2.2vh;
 box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.211);
 }
 
