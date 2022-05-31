@@ -469,6 +469,7 @@ input[type=Submit]:hover{
     border: none;
     text-decoration: none;
     color: white;
+    align-items: center;
     
 }
 .btn_sub_div:hover{
@@ -478,4 +479,7 @@ input[type=Submit]:hover{
 
 .btn_sub{
     position: relative;
+    text-decoration: none;
+    padding-left: 17vw;
+    padding-right: 17vw;
 }

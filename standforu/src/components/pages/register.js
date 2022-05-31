@@ -60,7 +60,7 @@ class register extends React.Component{
 
                         <div className="label_btn">
                           {/* <div className="btn_login_div" onClick={WithNavigate}><div className= "btn_login" style={{color:this.color_var}}>login</div></div>   */}
-                          <div className="btn_register_div"><Link to='/login' className= "btn_register" style={{color:this.color_var}}>Login</Link></div>
+                          <div className="btn_register_div"><Link to='/login' className= "btn_register" style={{color:this.color_var}}>Register</Link></div>
                         </div>
                     </div>
                 </div>
