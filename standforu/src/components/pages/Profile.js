@@ -6,6 +6,8 @@ import car2 from '../../images/corolla.jpg'
 import fotoperfil from '../../images/fotoperfil.png'  
 import { useNavigate } from "react-router-dom";  
 import { Icon } from '@iconify/react';
+import Embed_reviews from   '../layout/Embed_reviews.js'
+import Comments from '../../database/comments.json'
 
 
 function Profile (props){
@@ -13,6 +15,7 @@ function Profile (props){
     let navigate = useNavigate();
     const [apagar,setapagar] = React.useState("visible");
     const [apagar2,setapagar2] = React.useState("visible");
+    var array = [];
 
     const handleLogout = (e) => {
         e.preventDefault();
@@ -29,7 +32,19 @@ function Profile (props){
     }
     //Imprimir na console o valor de apagar
     console.log(apagar);
-    //funcao para esconder my2car
+
+    
+    Object.keys(Comments).forEach(function (key) {
+        array.push(Comments[key]);
+    });
+
+
+      const listComments = array.map((item,key) => 
+          <div key={key}>
+              <Embed_reviews title={item.title} description ={item.description}/>
+          </div>
+      );
+
     
     return (
         <div className="profilepage">
@@ -61,8 +76,11 @@ function Profile (props){
                     </div> 
             </div>
             <div className="myreviews">
-                <h1 className="myrev">My Reviews</h1>
-            </div>
+                <h1 className="myrev">My Reviews</h1>   
+                    <div className="CommentsProfile">
+                        {listComments}
+                    </div>
+            </div> 
             <button className="logout-button" onClick={handleLogout}>Logout</button>
         </div>
         
