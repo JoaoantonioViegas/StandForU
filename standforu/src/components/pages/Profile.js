@@ -41,7 +41,7 @@ function Profile (props){
 
       const listComments = array.map((item,key) => 
           <div key={key}>
-              <Embed_reviews seticon ={item.seticon} title={item.title} description ={item.description}/>
+              <Embed_reviews icon ={'trash'} title={item.title} description ={item.description}/>
           </div>
       );
 

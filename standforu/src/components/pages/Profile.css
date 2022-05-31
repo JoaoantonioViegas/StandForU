@@ -36,13 +36,13 @@
     position: absolute;
     width: 62vw;
     height: 73vh;
-    left: 65vw;
+    left: 30vw;
     top: 20vh;
     overflow-y:scroll;
 
     background: #ffffff;
     box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 40px;
+    border-radius: 40px 40px 0px 0px;
     margin: 0;
 }
 
@@ -212,9 +212,10 @@ color: #444444;
     /* top: 10px; */
     /* padding-left: 0px;
     padding-right: 0px; */
-    width: 15vw;
+    width: 18vw;
     height: 18vh;
     border-radius: 20px;
+    object-fit: cover;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.411);
 }
 
@@ -276,7 +277,7 @@ color: #444444;
     position: absolute;
     width: 2vh;
     height: 2vh;
-    right: 1vw;
+    right: 0vw;
     top: 0.5vh;
     align-items: center;
     text-decoration: none;
@@ -309,13 +310,11 @@ color: #444444;
 
 .CommentsProfile > div{
 background: #bdbdbd;
-padding-top: 1em;
-padding-left: 1em;
-padding-bottom: 1em;
-padding-right: 4vh;
+padding:1em;
 margin-top: 12px;
 margin-bottom: 12px;
 border-radius: 2vh;
+padding-top: 2.2vh;
 box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.211);
 }
 
