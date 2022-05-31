@@ -24,9 +24,9 @@ function Embed_reviews(props) {
     return (
         <motion.div animate={{opacity : 1, y:-10}} initial={{opacity:0}} exit={{opacity:0, y:10}} transition={{ duration:0.3}}>
             <div className="review-icon">
-                {iconStyle==='trash' && <Icon icon="bi:trash"/>}
-                {iconStyle==='heart' && <Icon  icon="akar-icons:heart" />}
-                {iconStyle==='fav' && <Icon  icon="emojione:red-heart" />}
+                {iconStyle==='trash' && <Icon icon="bi:trash" />}
+                {iconStyle==='heart' && <Icon  icon="akar-icons:heart" onClick={() => setIconStyle('fav')} style={{cursor:'pointer'}}/>}
+                {iconStyle==='fav' && <Icon  icon="emojione:red-heart" onClick={() => setIconStyle('heart')} style={{cursor:'pointer'}}/>}
             </div> 
             <a className="text">
                 <strong>
