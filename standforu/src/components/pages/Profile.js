@@ -76,7 +76,7 @@ function Profile (props){
                     </div> 
             </div>
             <div className="myreviews">
-                <h1 className="myrev">My Reviews</h1>   
+                <h1 className="myrev">My Reviews (6)</h1>   
                     <div className="CommentsProfile">
                         {listComments}
                     </div>
