@@ -34,8 +34,6 @@
 
 .myreviews{
     position: absolute;
-    width: 36vw;
-    height: 73vh;
     left: 64vw;
     top: 20vh;
     overflow-y:scroll;
@@ -147,12 +145,12 @@ color: #444444;
 
 .myrev{
     position: sticky;
-    padding-left: 15vw;
+    padding-left: 11vw;
     font-family: 'Roboto Mono';
     font-style: normal;
     font-weight: 300;
     font-size: 1.5vw;
-    /* line-height: 53px; */
+    line-height: 53px;
     
     color: #444444;
     }
@@ -284,9 +282,7 @@ color: #444444;
     text-decoration: none;
 
     position:absolute;  
-    /* background-color: #362525; */
     border-radius: 14px;
-    /* box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.211); */
     padding: 10px 10px;
     border:none;
     text-align: center;
@@ -297,13 +293,12 @@ color: #444444;
     cursor: pointer;
     font-family: 'Roboto Mono', monospace;
     transform: scale(1);
-    transition: all 0.3s ease-in-out;
 }
 
 .CommentsProfile{
     display: grid;
     grid-template-columns: repeat(1,1fr);
-    grid-gap:1em;
+    grid-gap:0.5em;
     margin-left:6%;
     margin-right:6%;
     width: 88%;
@@ -312,7 +307,7 @@ color: #444444;
 .CommentsProfile > div{
 background: #bdbdbd;
 margin-top: 12px;
-margin-bottom: 12px;
+/* margin-bottom: 12px; */
 border-radius: 2vh;
 box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.211);
 }
