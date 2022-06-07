@@ -2,11 +2,10 @@ import React from "react";
 import "./Embed_reviews.css";
 import { Icon } from '@iconify/react';
 import { motion } from "framer-motion";
-import Comments from "../../database/comments.json";
-import dummyph from '../../images/kia-rio-2021.jpg';
 
 function Embed_reviews(props) {
-    const {icon,title, description} = props;
+    const {icon,title, description, image} = props;
+    console.log(image)
     const [iconStyle, setIconStyle] = React.useState('');
     const [revShow, setRevShow] = React.useState(true);
 
@@ -26,7 +25,7 @@ function Embed_reviews(props) {
     return (
         <motion.div animate={{opacity : 1, y:-10}} initial={{opacity:0}} exit={{opacity:0, y:10}} transition={{ duration:0.3}} style={{cursor:'pointer', display : revShow? '' : 'none'}}>
             <div className="embed">
-            <img className="fotocar" src={dummyph} alt="dummyph"/>
+            <img className="fotocar" src={require('../../images/'+image)} alt="title"/>
                 <a className="text">
                     <strong>
                         {title} :

@@ -31,6 +31,7 @@ function Home(props) {
         setTransition('none')
         let car = array.find(item => item.marca === marca && item.modelo === modelo && item.ano === year)
         setCarObject(car);
+        console.log(marca)
     }
 
 
@@ -63,8 +64,9 @@ function Home(props) {
             return null
         }
     }).map((item,key) => 
-    <Embed_reviews icon={'heart'} title={item.autor +  ' - ' + item.marca + " " + item.modelo + '(' + item.ano + ')'} description={item.comentario}></Embed_reviews>
-                   
+    <div key={key} onClick={() => divOnClick(item.marca, item.modelo, item.ano)}> 
+        <Embed_reviews icon={'heart'} title={item.autor +  ' - ' + item.marca + " " + item.modelo + '(' + item.ano + ')'} description={item.comentario} image={item.imagem}></Embed_reviews>
+    </div>       
     );
 
     //Filter cars based on input
@@ -100,7 +102,9 @@ function Home(props) {
                 </div>
             </div>}
             
-            {!openAd && <Navbar link="buyacar" loggedIn= {props.loggedIn}/>}
+            <Navbar link="buyacar" loggedIn= {props.loggedIn} className='home-nav'/>
+
+            {!openAd && <motion.div animate={{opacity : 1, y:0}} initial={{opacity:0, y:2}} exit={{opacity:0, y:10}} transition={{ duration:0.3}} className="divider"></motion.div>}
 
             {!openAd && <input  className="searchInput" type={'text'} placeholder={'Search...'} onChange={(event) => setSearchTerm(event.target.value)}/>}
 
@@ -114,7 +118,7 @@ function Home(props) {
                 </AnimatePresence>
             </motion.div>}
             
-            {activeTab===1 && <motion.div className="Comments">
+            {activeTab===1 && !openAd && <motion.div className="Comments">
                 <AnimatePresence>
                     {listReviews}
                 </AnimatePresence>

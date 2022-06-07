@@ -24,7 +24,7 @@ function CarReview({carobject, setopenreview}) {
         return null
     }
 }).map((item,key) => 
-  <Embed_reviews icon={'heart'} title={item.autor +  ' - ' + item.marca + " " + item.modelo + '(' + item.ano + ')'} description={item.comentario}></Embed_reviews>
+  <Embed_reviews icon={'heart'} title={item.autor +  ' - ' + item.marca + " " + item.modelo + '(' + item.ano + ')'} description={item.comentario} image={item.imagem}></Embed_reviews>
                
 );
 

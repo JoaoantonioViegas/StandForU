@@ -3,8 +3,9 @@
 
 .CarAd-bg{
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     margin: 0;
+    margin-top: 16vh;
     background-color: #ebebeb;
     position: fixed;
     display: flex;
@@ -135,7 +136,7 @@
 
 .backButton{
     position: absolute;
-    top: 2vh;
+    top: -5vh;
     left: 2vw;
     background:transparent;
     border: none;
