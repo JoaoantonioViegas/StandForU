@@ -53,7 +53,6 @@ function CarAd({closeAd, visible, opacity, transition, carObject}) {
                     <h1 className='car-name'>{carObject.marca + " " + carObject.modelo}</h1>
                 </div>
                 <div className='car-info'>
-                    <p><em style={{fontStyle:'normal', fontWeight:'bold'}}>Evaluation:</em> 5 star</p>
                     <p><em style={{fontStyle:'normal', fontWeight:'bold'}}>Kms:</em> {carObject.kms} km</p>
                     <p><em style={{fontStyle:'normal', fontWeight:'bold'}}>Price:</em> {carObject.preco} €</p>
                     <p><em style={{fontStyle:'normal', fontWeight:'bold'}}>Year:</em> {carObject.ano}</p>
