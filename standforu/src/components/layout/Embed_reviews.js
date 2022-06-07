@@ -36,8 +36,8 @@ function Embed_reviews(props) {
                 </a>
                 <div className="review-icon">
                     {iconStyle==='trash' && <Icon icon="bi:trash" onClick={() => setRevShow(!revShow)}/>}
-                    {iconStyle==='heart' && <Icon  icon="akar-icons:heart" width="40%" onClick={() => setIconStyle('fav')} style={{cursor:'pointer'}}/>}
-                    {iconStyle==='fav' && <Icon  icon="emojione:red-heart" width="40%" onClick={() => setIconStyle('heart')} style={{cursor:'pointer'}}/>}
+                    {iconStyle==='heart' && <Icon  icon="akar-icons:heart" width="25px" onClick={() => setIconStyle('fav')} style={{cursor:'pointer'}}/>}
+                    {iconStyle==='fav' && <Icon  icon="emojione:red-heart" width="25px" onClick={() => setIconStyle('heart')} style={{cursor:'pointer'}}/>}
                 </div> 
             </div>
         </motion.div>
