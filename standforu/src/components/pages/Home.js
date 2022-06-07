@@ -21,7 +21,12 @@ function Home(props) {
     const [carObject, setCarObject] = useState({});
     const [opacity, setOpacity] = useState('1');
     const [transition, setTransition] = useState('visibility 0.3s linear,opacity 0.3s linear');
-
+    const numbers = ['heart','fav','heart'];
+    // choose an random value from numbers array
+    const randomNumberInRange = (min, max) => {
+        // 👇️ get number between min (inclusive) and max (inclusive)
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
 
     //Onclick open car ad 
     const divOnClick = (marca, modelo, year) => {
@@ -33,8 +38,6 @@ function Home(props) {
         setCarObject(car);
         console.log(marca)
     }
-
-
     //car Json into array
     var array = [];
     Object.keys(Cars).forEach(function (key) {
@@ -65,7 +68,7 @@ function Home(props) {
         }
     }).map((item,key) => 
     <div key={key} onClick={() => divOnClick(item.marca, item.modelo, item.ano)}> 
-        <Embed_reviews icon={'heart'} title={item.autor +  ' - ' + item.marca + " " + item.modelo + '(' + item.ano + ')'} description={item.comentario} image={item.imagem}></Embed_reviews>
+        <Embed_reviews icon={numbers[randomNumberInRange(0,2)]} title={item.autor +  ' - ' + item.marca + " " + item.modelo + '(' + item.ano + ')'} description={item.comentario} image={item.imagem}></Embed_reviews>
     </div>       
     );
 

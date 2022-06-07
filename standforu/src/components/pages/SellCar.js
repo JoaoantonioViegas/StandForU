@@ -53,8 +53,8 @@ class SellCar extends React.Component {
                     <input type="input" class="form__field3" placeholder="" name="kms" id='kms' required />
                     <label for="kms" class="form__label3">KMS</label>
 
-                    <input type="input" class="form__field4" placeholder="" name="priece" id='priece' required />
-                    <label for="priece" class="form__label4">Priece</label>
+                    <input type="input" class="form__field4" placeholder="" name="price" id='price' required />
+                    <label for="price" class="form__label4">Price</label>
 
                     <input type="input" class="form__field5" placeholder="" name="year" id='year' required />
                     <label for="year" class="form__label5">Year</label>
