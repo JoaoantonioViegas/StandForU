@@ -1,4 +1,5 @@
 import React from "react";
+import {useEffect, useCallback, useState} from 'react'
 import Navbar from "../layout/Navbar"
 import'./login.css'
 import {Link, useNavigate} from 'react-router-dom';
@@ -9,7 +10,29 @@ import { Icon } from '@iconify/react';
 function Login ({loggedIn, setLoggedIn}){
 
     let navigate = useNavigate();
+    let enter = 13;
+    const enterFunction = useCallback((event) => {
+        if (event.keyCode === enter) {
+            if(document.getElementById('username').value === "admin" && document.getElementById('password').value === "admin"){
+                event.preventDefault();
+                setLoggedIn(true);
+                // redirect to /profile using Navigate 
+                navigate(`/profile`);
+    
+            } else {
+                alert("Invalid username or password");
+            }
+        }
+      }, []);
+    
+    useEffect(() => {
+    document.addEventListener("keydown", enterFunction);
 
+    return () => {
+        document.removeEventListener("keydown", enterFunction);
+    };
+    }, [enterFunction]);
+    
     const handleLogin = (e) => {
 
         if(document.getElementById('username').value === "admin" && document.getElementById('password').value === "admin"){
@@ -26,7 +49,6 @@ function Login ({loggedIn, setLoggedIn}){
         navigate(`/register`);
     }
 
-
     var color_var = "#FFFFFF";
     return (
         <div className="loginpage">
@@ -40,7 +62,7 @@ function Login ({loggedIn, setLoggedIn}){
                     <input type="password" className="form__field2" placeholder="" name="password" id='password' required />
                     <label className="form__label2"><Icon icon="carbon:password" color="#4fbfb9" />   Pass</label>
                     <div className="label_btn">
-                        <div className="btn_login_div" onClick={handleLogin}><div className= "btn_login" style={{color:color_var}}>login</div></div>
+                        <div className="btn_login_div" onMouseEnter={handleLogin} onClick={handleLogin}><div className= "btn_login" style={{color:color_var}}>login</div></div>
                         <div className="btn_login_div" onClick={handleRegister}><div className= "btn_login" style={{color:color_var}}>Register</div></div>
                     </div>
                 </div>

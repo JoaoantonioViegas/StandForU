@@ -25,12 +25,14 @@ function Embed_reviews(props) {
     return (
         <motion.div animate={{opacity : 1, y:-10}} initial={{opacity:0}} exit={{opacity:0, y:10}} transition={{ duration:0.3}} style={{cursor:'pointer', display : revShow? '' : 'none'}}>
             <div className="embed">
-            <img className="fotocar" src={require('../../images/'+image)} alt="title"/>
+                <img className="fotocar" src={require('../../images/'+image)} alt="title"/>
                 <a className="text">
                     <strong>
-                        {title} :
-                    </strong> 
+                        {title}
+                    </strong>
+                    <p>
                     {description}
+                    </p>
                 </a>
                 <div className="review-icon">
                     {iconStyle==='trash' && <Icon icon="bi:trash" onClick={() => setRevShow(!revShow)}/>}

@@ -13,5 +13,6 @@
 "12":    {"marca": "Jeep" , "modelo":"Wrangler","ano": "2006" , "preco": "45 000" , "kms" : "88 200", "imagem" : "jeep-wrangler-2006.jpg"},
 "13":    {"marca": "Mitsubishi" , "modelo":"Outlander","ano": "2015" , "preco": "14 000" , "kms" : "273 400", "imagem" : "mitsubishi-outlander-2015.jpg"},
 "14":    {"marca": "Ford" , "modelo":"Fusion","ano": "2017" , "preco": "20 000" , "kms" : "121 500", "imagem" : "ford-fusion-2017.jpg"},
-"15":    {"marca": "Dodge" ,"modelo":"Challenger", "ano": "2018" , "preco": "80 000" , "kms" : "29 400", "imagem" : "dodge-challenger-2018.jpg"}
+"15":    {"marca": "Dodge" ,"modelo":"Challenger", "ano": "2018" , "preco": "80 000" , "kms" : "29 400", "imagem" : "dodge-challenger-2018.jpg"},
+"16":    {"marca": "Porshe" ,"modelo":"Panamera", "ano": "2022" , "preco": "125 000" , "kms" : "129 400", "imagem" : "porshe-panamera-2022.jpg"}
 }
