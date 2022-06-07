@@ -27,10 +27,12 @@ function Embed_reviews(props) {
         <motion.div animate={{opacity : 1, y:-10}} initial={{opacity:0}} exit={{opacity:0, y:10}} transition={{ duration:0.3}} style={{cursor:'pointer', display : revShow? '' : 'none'}}>
             <div className="embed">
             <img className="fotocar" src={dummyph} alt="dummyph"/>
-                <a className="text">
+                <a className="text">  
+                    <p>
                     <strong>
-                        {title} :
-                    </strong> 
+                        {title}
+                    </strong>
+                    </p>
                     {description}
                 </a>
                 <div className="review-icon">
