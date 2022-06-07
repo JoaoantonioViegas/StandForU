@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../layout/Navbar"
 import'./Profile.css'
 import car1 from '../../images/jeep-wrangler-2006.jpg'
 import car2 from '../../images/corolla.jpg'
+import Cars from "../../database/cars1.json";
+import CarDiv from "../layout/CarDiv.js";
+import {motion, AnimatePresence} from 'framer-motion';
 import fotoperfil from '../../images/fotoperfil.png'  
 import { useNavigate } from "react-router-dom";  
 import { Icon } from '@iconify/react';
@@ -41,9 +44,37 @@ function Profile (props){
 
       const listComments = array.map((item,key) => 
           <div key={key}>
-              <Embed_reviews icon ={'trash'} title={item.title} description ={item.description}/>
+              <Embed_reviews icon ={'trash'} title={item.title} description ={item.description} image={item.imagem}/>
           </div>
       );
+
+    const [openAd, setOpenAd] = useState(false);
+    const [carObject, setCarObject] = useState({});
+    //Animation related states
+    const [visibility, setVisibility] = useState('visible');
+    const [opacity, setOpacity] = useState('1');
+    const [transition, setTransition] = useState('visibility 0.3s linear,opacity 0.3s linear');
+
+    const divOnClick = (marca, modelo, year) => {
+        setOpenAd(true);
+        setVisibility('hidden');
+        setOpacity('0');
+        setTransition('none')
+        let car = array.find(item => item.marca === marca && item.modelo === modelo && item.ano === year)
+        setCarObject(car);
+    }
+
+    var array = [];
+    Object.keys(Cars).forEach(function (key) {
+        array.push(Cars[key]);
+    });
+
+    var filteredCars = array;
+    const listCars = filteredCars.map((item, key) =>
+        <div className="car" onClick={() => divOnClick(item.marca, item.modelo, item.ano)} key={key}>
+           <CarDiv image={item.imagem} info= {<React.Fragment> {item.marca + " " + item.modelo} <br/> {item.ano} <br/> {item.kms + " km"} <br/> {item.preco + " €"}</React.Fragment>}/>
+        </div>
+    );
 
     
     return (
@@ -60,20 +91,11 @@ function Profile (props){
             </div>
             <div className="mycars">
                 <h1 className="myselcars">My selling cars</h1>
-                    <div className="my1car" style={{visibility: apagar}}>
-                        <div className="car1"> 
-                            <img src={car1} alt="car1" className="imageprofcar"/>
-                            <h2 className="letrascarro1">Jeep Rangler</h2>
-                        </div>
-                        <Icon onClick={handleApagar1} className="trash" icon="bi:trash" />
-                    </div>
-                    <div className="my2car" style={{visibility: apagar2}}>
-                        <div className="car1"> 
-                            <img src={car2} alt="car1" className="imageprofcar"/>
-                            <h2 className="letrascarro1">Toyota corolla</h2>
-                        </div>
-                        <Icon onClick={handleApagar2} className="trash" icon="bi:trash" />
-                    </div> 
+                <motion.div className="carprof" style={{visibility:visibility, opacity:opacity, transition:transition}}>
+                    <AnimatePresence>
+                    {listCars}
+                    </AnimatePresence>
+                </motion.div>
             </div>
             <div className="myreviews">
                 <h1 className="myrev">My Reviews (6)</h1>   
