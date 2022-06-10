@@ -36,12 +36,14 @@ function CarReview({carobject, setopenreview}) {
     exit={{scale:0.2, opacity:0}}
     transition={{ type: "spring", stiffness: 400, damping: 30}}
     className='carReview'>
-        {/* <div className='closeButton-div'>
-            <Icon icon="ep:close-bold" onClick={() => {setopenreview(false)}} className='closeButton-btn'/>
-        </div> */}
+        
         <div className='carReview-container'>
           <div className='carReview-title'>
+            <div div className='closeButton-div'>
+              <Icon icon="ep:close-bold" onClick={() => {setopenreview(false)}} className='closeButton-btn'/>
+            </div>
             {carobject.marca + " " + carobject.modelo + " (" + carobject.ano + ") Reviews"}
+            
           </div>
           <div className='Comments-car'>
             {listReviews}
