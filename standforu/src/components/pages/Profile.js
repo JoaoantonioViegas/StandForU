@@ -11,6 +11,9 @@ import { useNavigate } from "react-router-dom";
 import { Icon } from '@iconify/react';
 import Embed_reviews from   '../layout/Embed_reviews.js'
 import Comments from '../../database/comments.json'
+import {ToastContainer,toast,Zoom,Bounce} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import axios from "axios";
 
 
 function Profile (props){
@@ -23,6 +26,7 @@ function Profile (props){
     const handleLogout = (e) => {
         e.preventDefault();
         props.setLoggedIn(false);
+        toast.success("Logged out successfully!");
         // redirect to /profile using Navigate 
         navigate(`/`);
     }
@@ -71,14 +75,15 @@ function Profile (props){
 
     var filteredCars = array;
     const listCars = filteredCars.map((item, key) =>
-        <div className="car" onClick={() => divOnClick(item.marca, item.modelo, item.ano)} key={key}>
-           <CarDiv image={item.imagem} info= {<React.Fragment> {item.marca + " " + item.modelo} <br/> {item.ano} <br/> {item.kms + " km"} <br/> {item.preco + " €"}</React.Fragment>}/>
+        <div className="car"  key={key}>
+           <CarDiv image={item.imagem} profile={true} info= {<React.Fragment> {item.marca + " " + item.modelo} <br/> {item.ano} <br/> {item.kms + " km"} <br/> {item.preco + " €"}</React.Fragment>}/>
         </div>
     );
 
     
     return (
         <div className="profilepage">
+            <ToastContainer/>
             <Navbar link="profile" loggedIn={props.loggedIn}/>
             <div className="profile">
                 <img src={fotoperfil} className="fotoperfil"/>
@@ -98,7 +103,7 @@ function Profile (props){
                 </motion.div>
             </div>
             <div className="myreviews">
-                    <h1 className="myrev">My Reviews (6)</h1>
+                    <h1 className="myrev">My Reviews</h1>
                     <div className="CommentsProfile">
                         {listComments}
                     </div>

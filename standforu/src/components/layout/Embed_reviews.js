@@ -3,6 +3,9 @@ import { useState } from "react";
 import "./Embed_reviews.css";
 import { Icon } from '@iconify/react';
 import { motion } from "framer-motion";
+import {ToastContainer,toast,Zoom,Bounce} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import axios from "axios";
 
 function Embed_reviews(props) {
     const {icon,title, description, image} = props;
@@ -21,6 +24,12 @@ function Embed_reviews(props) {
             setIconStyle('none');
         }
     }, [icon]);
+
+    const trash = () => {
+        setRevShow(!revShow);
+        //toast warning are u sure?
+        toast.warn("Do you want to delete this review?");
+    }
 
     
     const [num, setNum] = useState(0);
@@ -43,7 +52,7 @@ function Embed_reviews(props) {
                     </p>
                 </a>
                 <div className="review-icon">
-                    {iconStyle==='trash' && <Icon icon="bi:trash" onClick={() => setRevShow(!revShow)}/>}
+                    {iconStyle==='trash' && <Icon icon="bi:trash" onClick={trash}/>}
                     {iconStyle==='heart' && <div className="divheart"><Icon  icon="akar-icons:heart" width="25px" onClick={() => setIconStyle('fav')} style={{cursor:'pointer'}}/><h4>{value}</h4></div>}
                     {iconStyle==='fav' && <div className="divheart"><Icon  icon="emojione:red-heart" width="25px" onClick={() => setIconStyle('heart')} style={{cursor:'pointer'}}/><h4>{value}</h4></div>}
                 </div> 

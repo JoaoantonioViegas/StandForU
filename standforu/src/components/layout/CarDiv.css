@@ -196,3 +196,14 @@
     font-weight: 400;
     font-style: normal;
   }
+
+  .caixote{
+    position: absolute;
+    left: 26vh;
+    top: 10vw;
+  }
+  .editar{
+    position: absolute;
+    left: 26vh;
+    top: 11.5vw;
+  }

@@ -4,11 +4,13 @@ import Navbar from "../layout/Navbar"
 import'./login.css'
 import {Link, useNavigate} from 'react-router-dom';
 import { Icon } from '@iconify/react';
+import {ToastContainer,toast,Zoom,Bounce} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import axios from "axios";
 
 
 
 function Login ({loggedIn, setLoggedIn}){
-
     let navigate = useNavigate();
     let enter = 13;
     const enterFunction = useCallback((event) => {
@@ -18,9 +20,9 @@ function Login ({loggedIn, setLoggedIn}){
                 setLoggedIn(true);
                 // redirect to /profile using Navigate 
                 navigate(`/profile`);
-    
+                toast.success("Logged in succesfully")
             } else {
-                alert("Invalid username or password");
+                toast.error("Wrong username or password!");
             }
         }
       }, []);
@@ -40,9 +42,9 @@ function Login ({loggedIn, setLoggedIn}){
             setLoggedIn(true);
             // redirect to /profile using Navigate 
             navigate(`/profile`);
-
+            toast.success("login succesfully");
         } else {
-            alert("Invalid username or password");
+            toast.error("Wrong username or password!");
         }
     }
     const handleRegister = (e) => {
@@ -52,6 +54,7 @@ function Login ({loggedIn, setLoggedIn}){
     var color_var = "#FFFFFF";
     return (
         <div className="loginpage">
+            <ToastContainer/>
             <Navbar link="login" loggedIn={loggedIn}/>
             <div id="split_left">
                 <div className="left-login">
@@ -62,7 +65,7 @@ function Login ({loggedIn, setLoggedIn}){
                     <input type="password" className="form__field2" placeholder="" name="password" id='password' required />
                     <label className="form__label2"><Icon icon="carbon:password" color="#4fbfb9" />   Pass</label>
                     <div className="label_btn">
-                        <div className="btn_login_div" onMouseEnter={handleLogin} onClick={handleLogin}><div className= "btn_login" style={{color:color_var}}>login</div></div>
+                        <div className="btn_login_div" onClick={handleLogin}><div className= "btn_login" style={{color:color_var}}>login</div></div>
                         <div className="btn_login_div" onClick={handleRegister}><div className= "btn_login" style={{color:color_var}}>Register</div></div>
                     </div>
                 </div>
