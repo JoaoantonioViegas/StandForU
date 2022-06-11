@@ -151,6 +151,13 @@
     background: transparent;
     transition: border-color 0.2s;
     color: #000;
+    text-decoration: none;
+    top:  0;
+    left: -30%;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #444444;
+    font-weight: 300;
 }
 .MR_form__field3:required:valid ~ .MR_form__label3 {
     left: -34%;
@@ -161,7 +168,7 @@
     left: -30%;
     transition: 0.2s;
     font-size: 1rem;
-    color: 444444;
+    color: #444444;
     font-weight: 300;
 }
 .MR_form__field3:focus ~ .MR_form__label3{

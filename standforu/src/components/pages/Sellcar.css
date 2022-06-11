@@ -210,7 +210,15 @@ input[type=Submit]:hover{
     background: transparent;
     transition: border-color 0.2s;
     color: #000;
+    text-decoration: none;
+    top:  0;
+    left: -30%;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #444444;
+    font-weight: 300;
 }
+
 .form__field5:required:valid ~ .form__label5 {
     left: -6vw;
 }
@@ -222,6 +230,7 @@ input[type=Submit]:hover{
     font-size: 1rem;
     color: rgb(133, 133, 133);
 }
+
 .form__field5:focus ~ .form__label5{
     left: -6vw;
     transition: 0.5s;

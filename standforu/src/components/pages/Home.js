@@ -92,7 +92,7 @@ function Home(props) {
         }
     }).map((item,key) => 
         <div className="car" onClick={() => divOnClick(item.marca, item.modelo, item.ano)} key={key}>
-            <CarDiv image={item.imagem} info= {<React.Fragment> {item.marca + " " + item.modelo} <br/> {item.ano} <br/> {item.kms + " km"} <br/> {item.preco + " €"}</React.Fragment>}/>
+            <CarDiv image={item.imagem} trash={false} info= {<React.Fragment> {item.marca + " " + item.modelo} <br/> {item.ano} <br/> {item.kms + " km"} <br/> {item.preco + " €"}</React.Fragment>}/>
         </div>
     );
 
