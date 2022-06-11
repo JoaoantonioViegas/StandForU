@@ -155,3 +155,22 @@
     transform: scale(1.06);
     transition: all 0.3s ease-in-out;
 }
+
+.noCars{
+    text-align: center;
+}
+
+.noCarsImg{
+    width: 6vw;
+    position:absolute;
+    top:30vh;
+    left: 14vw;
+}
+.noCarsText{
+    font-family: 'Roboto Mono';
+    font-weight: 400;
+    font-size: 3rem;
+    position:absolute;
+    top:27vh;
+    left: 21vw;
+}

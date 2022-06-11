@@ -84,3 +84,13 @@
   .Comments-car > div:nth-child(odd){
     background: #dddddd;
   }
+
+  .noReviews{
+    font-family: 'Roboto Mono';
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: #646464;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }

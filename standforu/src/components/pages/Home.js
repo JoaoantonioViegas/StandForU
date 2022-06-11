@@ -14,6 +14,8 @@ function Home(props) {
     const [openAd, setOpenAd] = useState(false);
 
     const[activeTab, setActiveTab] = useState(0);
+    const[noCars, setNoCars] = useState(false);
+    const[noReviews, setNoReviews] = useState(false);
 
 
     const [visibility, setVisibility] = useState('visible');
@@ -72,6 +74,8 @@ function Home(props) {
     </div>       
     );
 
+
+
     //Filter cars based on input
     const listCars = array.filter((item) => {
         var search = searchTerm.toLowerCase().replace(/\s/g, '');
@@ -92,7 +96,25 @@ function Home(props) {
         </div>
     );
 
+    //If there are no cars in listCars, set noCars to true using setNoCars and useEffect
+    useEffect(() => {
+        if(listCars.length === 0){
+            setNoCars(true);
+        } else {
+            setNoCars(false);
+        }
+    }
+    , [listCars]);
 
+    //If there are no reviews in listReviews, set noReviews to true using setNoReviews and useEffect
+    useEffect(() => {
+        if(listReviews.length === 0){
+            setNoReviews(true);
+        } else {
+            setNoReviews(false);
+        }
+    }
+    , [listReviews]);
 
     return (
         <div className="Home">
@@ -120,7 +142,17 @@ function Home(props) {
                 {listCars}
                 </AnimatePresence>
             </motion.div>}
-            
+            {noCars &&  activeTab===0 && 
+            <div className="noCars">
+                <img src={require('../../images/notFound.png')} alt="noCarsImg" className="noCarsImg"/>
+                <p className="noCarsText">No cars found :(</p>
+            </div>}
+
+            {noReviews &&  activeTab===1 && 
+            <div className="noCars">
+                <img src={require('../../images/notFound.png')} alt="noCarsImg" className="noCarsImg"/>
+                <p className="noCarsText">No reviews found :(</p>
+            </div>}
             {activeTab===1 && !openAd && <motion.div className="Comments">
                 <AnimatePresence>
                     {listReviews}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './CarReview.css';
 import { Icon } from '@iconify/react';
 import {motion} from 'framer-motion';
@@ -7,6 +7,8 @@ import Embed_reviews from './Embed_reviews';
 
 
 function CarReview({carobject, setopenreview}) {
+
+  const [noReviews, setNoReviews] = useState(false);
 
   //Review Json into array
   var rev_array = [];
@@ -28,6 +30,16 @@ function CarReview({carobject, setopenreview}) {
                
 );
 
+  //If there are no reviews in listReviews, set noReviews to true using setNoReviews and useEffect
+  useEffect(() => {
+      if(listReviews.length === 0){
+          setNoReviews(true);
+      } else {
+          setNoReviews(false);
+      }
+  }
+  , [listReviews]);
+
 
   return (
     <motion.div 
@@ -47,6 +59,7 @@ function CarReview({carobject, setopenreview}) {
           </div>
           <div className='Comments-car'>
             {listReviews}
+            {noReviews ? <div className='noReviews'>No reviews yet</div> : null}
           </div>
         </div>
         
