@@ -30,7 +30,14 @@ function Embed_reviews(props) {
         //toast warning are u sure?
         toast.warn("Do you want to delete this review?");
     }
-
+    function toheart(){
+        setIconStyle('heart');
+        setvalue(value-1);
+    }
+    function tofav(){
+        setIconStyle('fav');
+        setvalue(value+1);
+    }
     
     const [num, setNum] = useState(0);
 
@@ -53,8 +60,8 @@ function Embed_reviews(props) {
                 </a>
                 <div className="review-icon">
                     {iconStyle==='trash' && <Icon icon="bi:trash" onClick={trash}/>}
-                    {iconStyle==='heart' && <div className="divheart"><Icon  icon="akar-icons:heart" width="25px" onClick={() => setIconStyle('fav')} style={{cursor:'pointer'}}/><h4>{value}</h4></div>}
-                    {iconStyle==='fav' && <div className="divheart"><Icon  icon="emojione:red-heart" width="25px" onClick={() => setIconStyle('heart')} style={{cursor:'pointer'}}/><h4>{value}</h4></div>}
+                    {iconStyle==='heart' && <div className="divheart"><Icon  icon="akar-icons:heart" width="25px" onClick={tofav} style={{cursor:'pointer'}}/><h4>{value}</h4></div>}
+                    {iconStyle==='fav' && <div className="divheart"><Icon  icon="emojione:red-heart" width="25px" onClick={toheart} style={{cursor:'pointer'}}/><h4>{value}</h4></div>}
                 </div> 
             </div>
         </motion.div>
