@@ -166,3 +166,11 @@
     transform: scale(1.1);
     transition: transform 0.3s ease-in-out;
 }
+
+.siteevaluation{
+    position: absolute;
+    width: 8vw;
+    height: 8vh;
+    left: 56.5vw;
+    top: 18vh;
+}

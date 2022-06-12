@@ -42,7 +42,7 @@ class SellCar extends React.Component {
     if(document.getElementById('brand').value === "" || document.getElementById('model').value === "" || document.getElementById('year').value === "" || document.getElementById('kms').value === ""|| document.getElementById('price').value === "" || document.getElementById('fuel').value === ""|| document.getElementById('engine').value === ""|| document.getElementById('horse_power').value === ""){
       toast.error("Please fill all inputs");
     }else{
-      toast.success("Review added successfully");
+      toast.success("Announcemment added successfully");
     }
   }
   render() {

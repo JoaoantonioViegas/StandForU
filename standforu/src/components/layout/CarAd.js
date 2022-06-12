@@ -4,9 +4,11 @@ import './CarAd.css'
 import { Icon } from '@iconify/react';
 import {motion, AnimatePresence} from 'framer-motion'
 import CarReview from './CarReview';
+import Star from './Star';
+import evaluation from '../../images/Rectangle_1.svg'
 
 function CarAd({closeAd, visible, opacity, transition, carObject}) {
-
+    const [random, setRandom] = useState(Math.floor(Math.random() * 5) + 1);
     const escFunction = useCallback((event) => {
         if (event.keyCode === 27) {
           closeAd(false);
@@ -41,7 +43,7 @@ function CarAd({closeAd, visible, opacity, transition, carObject}) {
         
         className='CarAd-bg'>
             <button className='backButton' onClick={() => {closeAd(false); visible('visible');opacity('1'); transition('visibility 0.3s linear,opacity 0.3s linear') }}>
-                <Icon icon="akar-icons:arrow-left" />
+                <Icon icon="bi:arrow-left"/>
             </button>
             <AnimatePresence>
                 {openReview && <motion.div className='reviewPopup'><CarReview carobject={carObject} setopenreview={setOpenReview}/></motion.div>}
@@ -59,6 +61,8 @@ function CarAd({closeAd, visible, opacity, transition, carObject}) {
             <div className='middle-container'>
                 <div className='car-description'>
                     <h1 className='car-name'>{carObject.marca + " " + carObject.modelo}</h1>
+                    <Star stars={random}/>
+                    <img className='siteevaluation' src={evaluation}/>
                     <p><em style={{fontStyle:'normal', fontWeight:'bold'}}>Kms:</em> {carObject.kms} km</p>
                     <p><em style={{fontStyle:'normal', fontWeight:'bold'}}>Price:</em> {carObject.preco} €</p>
                     <p><em style={{fontStyle:'normal', fontWeight:'bold'}}>Year:</em> {carObject.ano}</p>
