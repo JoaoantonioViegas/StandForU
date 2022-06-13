@@ -62,7 +62,9 @@ function CarAd({closeAd, visible, opacity, transition, carObject}) {
                 <div className='car-description'>
                     <h1 className='car-name'>{carObject.marca + " " + carObject.modelo}</h1>
                     <Star stars={random}/>
-                    <img className='siteevaluation' src={evaluation}/>
+                    {/* <img className='siteevaluation' src={evaluation}/> */}
+                    {/* <h1 className="Ourevaluation">Our evaluation</h1>
+                    <Icon className='arrowevaluation' icon="bxs:down-arrow" color="black"/> */}
                     <p><em style={{fontStyle:'normal', fontWeight:'bold'}}>Kms:</em> {carObject.kms} km</p>
                     <p><em style={{fontStyle:'normal', fontWeight:'bold'}}>Price:</em> {carObject.preco} €</p>
                     <p><em style={{fontStyle:'normal', fontWeight:'bold'}}>Year:</em> {carObject.ano}</p>

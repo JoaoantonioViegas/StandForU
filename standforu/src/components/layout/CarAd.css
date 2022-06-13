@@ -174,3 +174,19 @@
     left: 56.5vw;
     top: 18vh;
 }
+
+.arrowevaluation{
+    position: absolute;
+    width: 4vw;
+    height: 2vh;
+    left: 56.5vw;
+    top: 19.7vh;
+}
+
+.Ourevaluation{
+    position: absolute;
+    top: 12vh;
+    left: 56.4vw;
+    font-size: 1.5vh;
+    width: 20vh;
+}
