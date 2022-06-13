@@ -26,7 +26,6 @@ function Profile (props){
     const handleLogout = (e) => {
         e.preventDefault();
         props.setLoggedIn(false);
-        toast.success("Logged out successfully!");
         // redirect to /profile using Navigate 
         navigate(`/`);
     }
@@ -48,7 +47,7 @@ function Profile (props){
 
       const listComments = array.map((item,key) => 
           <div key={key}>
-              <Embed_reviews icon ={'trash'} title={item.title} description ={item.description} image={item.imagem}/>
+              <Embed_reviews icon ={'trash'} title={item.title} description ={item.description} image={item.imagem} margin={true}/>
           </div>
       );
 
@@ -83,7 +82,7 @@ function Profile (props){
     
     return (
         <div className="profilepage">
-            <ToastContainer/>
+            {/* <ToastContainer/> */}
             <Navbar link="profile" loggedIn={props.loggedIn}/>
             <div className="profile">
                 <img src={fotoperfil} className="fotoperfil"/>

@@ -6,7 +6,6 @@ import {Link, useNavigate} from 'react-router-dom';
 import { Icon } from '@iconify/react';
 import {ToastContainer,toast,Zoom,Bounce} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import axios from "axios";
 
 
 
@@ -20,7 +19,6 @@ function Login ({loggedIn, setLoggedIn}){
                 setLoggedIn(true);
                 // redirect to /profile using Navigate 
                 navigate(`/profile`);
-                toast.success("Logged in succesfully")
             } else {
                 toast.error("Wrong username or password!");
             }
@@ -42,7 +40,6 @@ function Login ({loggedIn, setLoggedIn}){
             setLoggedIn(true);
             // redirect to /profile using Navigate 
             navigate(`/profile`);
-            toast.success("login succesfully");
         } else {
             toast.error("Wrong username or password!");
         }
@@ -54,7 +51,6 @@ function Login ({loggedIn, setLoggedIn}){
     var color_var = "#FFFFFF";
     return (
         <div className="loginpage">
-            <ToastContainer/>
             <Navbar link="login" loggedIn={loggedIn}/>
             <div id="split_left">
                 <div className="left-login">

@@ -23,6 +23,17 @@
     margin: 0;
 }
 
+.undo-btn{
+    border-radius: 10px;
+    border-width: 0;
+    width: 90px;
+    height: 30px;
+    cursor: pointer;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.082);
+    background-color: #bdbdbd;
+    margin-left: 6px;
+}
+
 .embed{
     display: grid;
     grid-template-columns: 4fr 8fr 1fr;

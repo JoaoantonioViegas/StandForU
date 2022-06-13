@@ -5,14 +5,17 @@ import { Icon } from '@iconify/react';
 import { motion } from "framer-motion";
 import {ToastContainer,toast,Zoom,Bounce} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import axios from "axios";
 
 function Embed_reviews(props) {
     const {icon,title, description, image} = props;
+    
     console.log(image)
     const [iconStyle, setIconStyle] = React.useState('');
     const [revShow, setRevShow] = React.useState(true);
     const [value,setvalue] = React.useState(randomNumberInRange(10,300));
+
+    const toastId = React.useRef(null);
+
     React.useEffect(() => {
         if (icon === 'trash'){
             setIconStyle('trash');
@@ -25,11 +28,38 @@ function Embed_reviews(props) {
         }
     }, [icon]);
 
+    const Undo = ({ onUndo, closeToast }) => {
+        const handleClick = () => {
+            console.log('Undo clicked');
+            setRevShow(true);
+            closeToast();
+        };
+      
+        return (
+          <div>
+            <h3>
+              Review deleted <button onClick={handleClick} className='undo-btn'>UNDO</button>
+            </h3>
+          </div>
+        );
+      };
+
     const trash = () => {
         setRevShow(!revShow);
         //toast warning are u sure?
-        toast.warn("Do you want to delete this review?");
+        toast.warning(<Undo></Undo>, {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: true,
+            closeButton: false,
+            closeOnClick: false,
+            pauseOnHover: false,
+            draggable: false,
+        })
+        
     }
+
+    
     function toheart(){
         setIconStyle('heart');
         setvalue(value-1);
@@ -52,7 +82,7 @@ function Embed_reviews(props) {
                 <img className="fotocar" src={require('../../images/'+image)} alt="title"/>
                 <a className="text">
                     <strong>
-                        {title}
+                        {title} 
                     </strong>
                     <p>
                     {description}

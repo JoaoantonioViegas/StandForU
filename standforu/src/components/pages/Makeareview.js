@@ -10,7 +10,15 @@ function Makeareview(props) {
     e.preventDefault();
     //verificar que o input brand, model, year, review não estão vazios
     if(document.getElementById('brand').value === "" || document.getElementById('model').value === "" || document.getElementById('year').value === "" || document.getElementById('review').value === ""){
-      toast.error('Please fill all the fields');
+      toast.error('Please fill all the fields', {
+        position: "top-right",
+        autoClose: 1300,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        });
     }else{
       toast.success("Review added successfully");
       navigate(`/`);

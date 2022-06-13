@@ -8,6 +8,7 @@ import Star from './Star';
 import evaluation from '../../images/Rectangle_1.svg'
 
 function CarAd({closeAd, visible, opacity, transition, carObject}) {
+    
     const [random, setRandom] = useState(Math.floor(Math.random() * 5) + 1);
     const escFunction = useCallback((event) => {
         if (event.keyCode === 27) {
@@ -19,11 +20,11 @@ function CarAd({closeAd, visible, opacity, transition, carObject}) {
       }, []);
 
     useEffect(() => {
-    document.addEventListener("keydown", escFunction);
+        document.addEventListener("keydown", escFunction);
 
-    return () => {
-        document.removeEventListener("keydown", escFunction);
-    };
+        return () => {
+            document.removeEventListener("keydown", escFunction);
+        };
     }, [escFunction]);
 
     const[openReview, setOpenReview] = useState(false);
@@ -60,7 +61,7 @@ function CarAd({closeAd, visible, opacity, transition, carObject}) {
             </div>
             <div className='middle-container'>
                 <div className='car-description'>
-                    <h1 className='car-name'>{carObject.marca + " " + carObject.modelo}</h1>
+                    <h2 className='car-name'>{carObject.marca + " " + carObject.modelo}</h2>
                     <Star stars={random}/>
                     {/* <img className='siteevaluation' src={evaluation}/> */}
                     {/* <h1 className="Ourevaluation">Our evaluation</h1>
